@@ -144,6 +144,16 @@ body {
     letter-spacing: 0.05em;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Reduced gap for better proportion */
+}
+
+.logo-svg {
+    height: clamp(10rem, 5vw, 11rem); /* Much smaller - changed from 12-13rem */
+    width: auto;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(1326%) hue-rotate(344deg) brightness(95%) contrast(88%);
 }
 
 .desktop-nav {
@@ -803,7 +813,12 @@ body {
     }
     
     .logo-text {
-        font-size: 1rem;
+        font-size: 0.9rem; /* Smaller text on mobile */
+        gap: 0.4rem;
+    }
+    
+    .logo-svg {
+        height: 2rem; /* Smaller logo on mobile */
     }
     
     .section-container {
