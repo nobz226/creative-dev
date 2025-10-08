@@ -1,3 +1,31 @@
+/* Font Declarations */
+@font-face {
+    font-family: 'Futura-ExtraBold';
+    src:
+         url('../fonts/Futura Extra Bold/Futura Extra Bold.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura-Medium';
+    src:
+         url('../fonts/Futura-Medium/Futura-Medium Regular/Futura-Medium Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src:
+         url('../fonts/Sans/Sans Regular/Sans Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Custom properties for colors and fonts */
 :root {
     --cream: #dacebf;
@@ -7,6 +35,11 @@
     --white: #ffffff;
     --light-gray: #f8f9fa;
     --border-color: #e5e7eb;
+    
+    /* Typography families */
+    --futura-extrabold: 'Futura-ExtraBold', Impact, 'Arial Black', sans-serif;
+    --futura-medium: 'Futura-Medium', 'Arial Narrow', sans-serif;
+    --dm-sans-light: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Reset and base styles */
@@ -17,29 +50,30 @@
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--dm-sans-light);
+    font-weight: 300;
     background-color: var(--cream);
     line-height: 1.6;
     color: var(--dark-brown);
 }
 
-/* Typography */
+/* Typography Classes */
 .futura-extrabold {
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: var(--futura-extrabold);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .futura-medium {
-    font-family: 'Arial Narrow', sans-serif;
+    font-family: var(--futura-medium);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
 
 .dm-sans-light {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--dm-sans-light);
     font-weight: 300;
 }
 
@@ -54,13 +88,14 @@ body {
     padding: 0 1rem;
 }
 
+/* HEADINGS - Futura Extrabold */
 .section-title {
     font-size: clamp(2rem, 5vw, 2.5rem);
+    font-family: var(--futura-extrabold);
     font-weight: 900;
     color: var(--dark-brown);
     text-align: center;
     margin-bottom: 3rem;
-    font-family: Impact, 'Arial Black', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     position: relative;
@@ -99,9 +134,10 @@ body {
     min-height: 4.5rem;
 }
 
+/* HEADING - Logo uses Futura Extrabold */
 .logo-text {
     color: var(--dark-brown);
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: var(--futura-extrabold);
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-weight: 900;
     text-transform: uppercase;
@@ -123,12 +159,13 @@ body {
     overflow: hidden;
 }
 
+/* SUBHEADING - Nav links use Futura Medium */
 .nav-link {
     color: var(--dark-brown);
     text-decoration: none;
     padding: 0.75rem clamp(0.5rem, 1vw, 1rem);
     font-size: clamp(0.75rem, 1.5vw, 0.85rem);
-    font-family: 'Arial Narrow', sans-serif;
+    font-family: var(--futura-medium);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -182,13 +219,14 @@ body {
     gap: 0.5rem;
 }
 
+/* SUBHEADING - Mobile nav links use Futura Medium */
 .mobile-nav-link {
     color: var(--dark-brown);
     text-decoration: none;
     display: block;
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
-    font-family: 'Arial Narrow', sans-serif;
+    font-family: var(--futura-medium);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -228,9 +266,10 @@ body {
     z-index: 1;
 }
 
+/* HEADING - Hero title uses Futura Extrabold */
 .hero-title {
     font-size: clamp(2.5rem, 8vw, 4rem);
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: var(--futura-extrabold);
     font-weight: 900;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
@@ -239,8 +278,10 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* PARAGRAPH - Hero subtitle uses DM Sans Light */
 .hero-subtitle {
     font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-family: var(--dm-sans-light);
     font-weight: 300;
     margin-bottom: 2.5rem;
     max-width: 50rem;
@@ -250,12 +291,13 @@ body {
     opacity: 0.95;
 }
 
+/* SUBHEADING - Hero button uses Futura Medium */
 .hero-button {
     background-color: var(--cream);
     color: var(--dark-brown);
     padding: clamp(1rem, 2vw, 1.2rem) clamp(2rem, 4vw, 2.5rem);
-    font-family: 'Arial Narrow', sans-serif;
-    font-weight: 700;
+    font-family: var(--futura-medium);
+    font-weight: 600;
     font-size: clamp(1rem, 2vw, 1.1rem);
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -310,20 +352,24 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* SUBHEADING - Feature titles use Futura Medium */
 .feature-title {
     font-size: clamp(1.3rem, 3vw, 1.6rem);
-    font-family: 'Arial Narrow', sans-serif;
-    font-weight: 700;
+    font-family: var(--futura-medium);
+    font-weight: 600;
     color: var(--slate-blue);
     margin-bottom: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
 
+/* PARAGRAPH - Feature text uses DM Sans Light */
 .feature-text {
     color: var(--dark-brown);
     line-height: 1.7;
     font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: var(--dm-sans-light);
+    font-weight: 300;
 }
 
 /* Quick Links Section */
@@ -415,9 +461,10 @@ body {
     height: clamp(1rem, 2vw, 1.5rem);
 }
 
+/* SUBHEADING - Quick link titles use Futura Medium */
 .quick-link-title {
-    font-family: 'Arial Narrow', sans-serif;
-    font-weight: 700;
+    font-family: var(--futura-medium);
+    font-weight: 600;
     font-size: clamp(0.85rem, 2vw, 1rem);
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -448,6 +495,7 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* HEADING - Story avatars use Futura Extrabold */
 .story-avatar {
     width: clamp(3.5rem, 6vw, 4.5rem);
     height: clamp(3.5rem, 6vw, 4.5rem);
@@ -457,7 +505,7 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: var(--futura-extrabold);
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 900;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -471,9 +519,10 @@ body {
     background-color: var(--medium-brown);
 }
 
+/* SUBHEADING - Story titles use Futura Medium */
 .story-title {
-    font-family: 'Arial Narrow', sans-serif;
-    font-weight: 700;
+    font-family: var(--futura-medium);
+    font-weight: 600;
     color: var(--slate-blue);
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -481,11 +530,14 @@ body {
     font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
+/* PARAGRAPH - Story text uses DM Sans Light */
 .story-text {
     color: var(--dark-brown);
     font-size: clamp(0.85rem, 1.8vw, 0.95rem);
     line-height: 1.6;
     font-style: italic;
+    font-family: var(--dm-sans-light);
+    font-weight: 300;
 }
 
 /* CTA Section */
@@ -515,17 +567,20 @@ body {
     z-index: 1;
 }
 
+/* HEADING - CTA title uses Futura Extrabold */
 .cta-title {
     font-size: clamp(2rem, 5vw, 2.5rem);
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: var(--futura-extrabold);
     font-weight: 900;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
+/* PARAGRAPH - CTA text uses DM Sans Light */
 .cta-text {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-family: var(--dm-sans-light);
     font-weight: 300;
     margin-bottom: 2.5rem;
     line-height: 1.6;
@@ -540,10 +595,11 @@ body {
     align-items: center;
 }
 
+/* SUBHEADING - CTA buttons use Futura Medium */
 .cta-button {
     padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 4vw, 2.5rem);
-    font-family: 'Arial Narrow', sans-serif;
-    font-weight: 700;
+    font-family: var(--futura-medium);
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
     border: 2px solid transparent;
@@ -603,8 +659,9 @@ body {
     grid-column: span 1;
 }
 
+/* HEADING - Footer logo uses Futura Extrabold */
 .footer-logo {
-    font-family: Impact, 'Arial Black', sans-serif;
+    font-family: var(--futura-extrabold);
     font-weight: 900;
     color: var(--dark-brown);
     font-size: clamp(1.2rem, 2.5vw, 1.4rem);
@@ -613,17 +670,21 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* PARAGRAPH - Footer description uses DM Sans Light */
 .footer-description {
     color: var(--dark-brown);
     font-size: clamp(0.85rem, 1.8vw, 0.95rem);
     line-height: 1.7;
     margin-bottom: 1rem;
     opacity: 0.8;
+    font-family: var(--dm-sans-light);
+    font-weight: 300;
 }
 
+/* SUBHEADING - Footer headings use Futura Medium */
 .footer-heading {
-    font-family: 'Arial Narrow', sans-serif;
-    font-weight: 700;
+    font-family: var(--futura-medium);
+    font-weight: 600;
     color: var(--slate-blue);
     margin-bottom: 1.2rem;
     text-transform: uppercase;
@@ -638,12 +699,15 @@ body {
     gap: 0.7rem;
 }
 
+/* PARAGRAPH - Footer links use DM Sans Light */
 .footer-link {
     color: var(--dark-brown);
     text-decoration: none;
     font-size: clamp(0.8rem, 1.6vw, 0.9rem);
     transition: color 0.3s ease;
     opacity: 0.8;
+    font-family: var(--dm-sans-light);
+    font-weight: 300;
 }
 
 .footer-link:hover {
@@ -658,10 +722,13 @@ body {
     text-align: center;
 }
 
+/* PARAGRAPH - Footer copyright uses DM Sans Light */
 .footer-copyright {
     color: var(--dark-brown);
     font-size: clamp(0.75rem, 1.5vw, 0.85rem);
     opacity: 0.7;
+    font-family: var(--dm-sans-light);
+    font-weight: 300;
 }
 
 /* Responsive Design */
