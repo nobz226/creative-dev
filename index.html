@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Creative Dev - New Media Student Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-wrapper">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <div class="logo-text">
+                        THE CREATIVE DEV
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <div class="nav-links">
+                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link">Programs Hub</a>
+                        <a href="#" class="nav-link">Courses</a>
+                        <a href="#" class="nav-link">Community</a>
+                        <a href="#" class="nav-link">Student Resources</a>
+                        <a href="#" class="nav-link">Blog/News</a>
+                        <a href="#" class="nav-link">Contact/Join</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="mobile-menu-button">
+                    <button id="mobile-menu-btn" class="menu-btn">
+                        <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-nav hidden">
+            <div class="mobile-nav-links">
+                <a href="#" class="mobile-nav-link">About</a>
+                <a href="#" class="mobile-nav-link">Programs Hub</a>
+                <a href="#" class="mobile-nav-link">Courses</a>
+                <a href="#" class="mobile-nav-link">Community</a>
+                <a href="#" class="mobile-nav-link">Student Resources</a>
+                <a href="#" class="mobile-nav-link">Blog/News</a>
+                <a href="#" class="mobile-nav-link">Contact/Join</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                BY STUDENTS,<br>FOR STUDENTS
+            </h1>
+            <p class="hero-subtitle">
+                The Creative Dev supports New Media students with resources, tutorials, peer advice, and community connections to help you excel in your program.
+            </p>
+            <button class="hero-button">
+                EXPLORE RESOURCES
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                WHAT WE OFFER
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">Academic Support</h3>
+                    <p class="feature-text">
+                        Get program and course information, design and development tutorials, assignment help, and tips for excelling in your coursework. Our peer-created content supplements your classes with real student insights.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Community & Mentorship</h3>
+                    <p class="feature-text">
+                        Connect with current students and alumni, access peer tutoring opportunities, and build meaningful relationships. Find mental health resources and join a supportive community that understands your journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                QUICK LINKS
+            </h2>
+            <div class="quick-links-grid">
+                <a href="#" class="quick-link purple">
+                    <div class="quick-link-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="quick-link-title">Program Info</h4>
+                </a>
+                
+                <a href="#" class="quick-link green">
+                    <div class="quick-link-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h4 class="quick-link-title">Courses</h4>
+                </a>
+                
+                <a href="#" class="quick-link pink">
+                    <div class="quick-link-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h4 class="quick-link-title">Community</h4>
+                </a>
+                
+                <a href="#" class="quick-link teal">
+                    <div class="quick-link-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v2a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="quick-link-title">Resources</h4>
+                </a>
+                
+                <a href="#" class="quick-link blue">
+                    <div class="quick-link-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="quick-link-title">Blog/News</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Stories Preview -->
+    <section class="stories-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                STUDENT STORIES
+            </h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-avatar slate-blue-bg">
+                        A
+                    </div>
+                    <h4 class="story-title">From High School to New Media</h4>
+                    <p class="story-text">
+                        "The Creative Dev helped me understand what to expect before starting the program..."
+                    </p>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar medium-brown-bg">
+                        E
+                    </div>
+                    <h4 class="story-title">Surviving Second Term</h4>
+                    <p class="story-text">
+                        "The tutorials and peer support made all the difference in managing my workload..."
+                    </p>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar slate-blue-bg">
+                        M
+                    </div>
+                    <h4 class="story-title">Alumni Success Story</h4>
+                    <p class="story-text">
+                        "This community stayed with me throughout my program and into my career..."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">
+                JOIN THE COMMUNITY
+            </h2>
+            <p class="cta-text">
+                Connect with fellow students, contribute your insights, and help build the resource hub that supports the next generation of New Media students.
+            </p>
+            <div class="cta-buttons">
+                <button class="cta-button primary">
+                    GET INVOLVED
+                </button>
+                <button class="cta-button secondary">
+                    CONTACT US
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-main">
+                    <h3 class="footer-logo">THE CREATIVE DEV</h3>
+                    <p class="footer-description">
+                        A student-led initiative supporting BCIT New Media students with peer-created resources, tutorials, and community connections. By students, for students.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#" class="footer-link">Programs Hub</a></li>
+                        <li><a href="#" class="footer-link">Student Resources</a></li>
+                        <li><a href="#" class="footer-link">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Join the Team</a></li>
+                        <li><a href="#" class="footer-link">Contribute Content</a></li>
+                        <li><a href="#" class="footer-link">Student Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 The Creative Dev. Created by BCIT New Media students.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
