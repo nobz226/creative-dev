@@ -217,7 +217,7 @@ body {
 }
 
 .logo-svg {
-    height: clamp(8rem, 11vw, 8.5rem); /* Reduced from 10-11rem which was too large */
+    height: clamp(4rem, 6vw, 4.5rem); /* Reduced from 10-11rem which was too large */
     width: auto;
     flex-shrink: 0;
     filter: brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(1326%) hue-rotate(344deg) brightness(95%) contrast(88%);
