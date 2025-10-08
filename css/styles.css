@@ -197,6 +197,7 @@ body {
     align-items: center;
     height: 4.5rem;
     min-height: 4.5rem;
+    gap: 2rem; /* Add consistent gap between all elements */
 }
 
 /* HEADING - Logo uses Futura Extrabold */
@@ -212,10 +213,11 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex: 0 0 auto; /* Don't grow or shrink */
 }
 
 .logo-svg {
-    height: clamp(10rem, 8vw, 11rem);
+    height: clamp(8rem, 11vw, 8.5rem); /* Reduced from 10-11rem which was too large */
     width: auto;
     flex-shrink: 0;
     filter: brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(1326%) hue-rotate(344deg) brightness(95%) contrast(88%);
@@ -229,23 +231,25 @@ body {
 
 .desktop-nav {
     display: none;
+    flex: 1; /* Take up remaining space */
+    justify-content: center; /* Center the nav links */
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: clamp(1rem, 2vw, 2rem);
-    margin-left: clamp(1rem, 3vw, 3rem);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
     flex-wrap: nowrap;
-    overflow: hidden;
+    overflow: visible;
+    margin: 0; /* Remove margin */
 }
 
 /* SUBHEADING - Nav links use Futura Medium */
 .nav-link {
     color: var(--dark-brown);
     text-decoration: none;
-    padding: 0.75rem clamp(0.5rem, 1vw, 1rem);
-    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    padding: 0.75rem clamp(0.8rem, 1.5vw, 1.2rem);
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     font-family: var(--futura-medium);
     font-weight: 600;
     text-transform: uppercase;
@@ -266,6 +270,7 @@ body {
 .mobile-menu-button {
     display: block;
     flex-shrink: 0;
+    flex: 0 0 auto; /* Don't grow or shrink */
 }
 
 .menu-btn {
@@ -392,7 +397,7 @@ body {
 }
 
 .hero-button:hover {
-    background-color: var(--white);
+    background-color: var(--dark-brown);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
@@ -676,7 +681,6 @@ body {
 }
 
 .cta-button.secondary:hover {
-    background-color: var(--cream);
     color: var(--dark-brown);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -1292,7 +1296,7 @@ body {
 }
 
 .team-contact-card__link {
-    color: var(--cream);
+    color: var(--dark-brown);
     text-decoration: none;
     font-family: var(--futura-medium);
     font-size: 0.8rem;
@@ -1496,11 +1500,15 @@ body {
 
 @media (min-width: 768px) {
     .desktop-nav {
-        display: block;
+        display: flex; /* Show desktop nav */
     }
     
     .mobile-menu-button {
         display: none;
+    }
+    
+    .nav-content {
+        gap: 3rem; /* Increase gap on larger screens */
     }
     
     .features-grid {
