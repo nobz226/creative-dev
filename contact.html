@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Join - The Creative Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 shadow-sm">
+        <div class="section-container flex justify-between items-center">
+            <div class="nav-logo">
+                <img src="logos/logo-darkbrown.svg" alt="The Creative Dev" class="h-8">
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="program-hub.html" class="nav-link">Program Hub</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="community.html" class="nav-link">Community</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link nav-link--active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-to-br from-slate-blue via-medium-brown to-dark-brown text-white py-16 md:py-24">
+        <div class="section-container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="hero-title mb-6">Get Involved</h1>
+                <p class="hero-subtitle text-cream">Have questions? Want to contribute? Ready to join our community of BCIT New Media students supporting each other?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-16 md:py-20">
+        <div class="section-container">
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="contact-option">
+                    <div class="contact-option__icon bg-slate-blue"></div>
+                    <h3 class="features-title mb-3">General Questions</h3>
+                    <p class="body-text text-sm mb-4">Questions about the program, resources, or how to get involved with The Creative Dev community.</p>
+                    <a href="mailto:hello@thecreativedev.ca" class="contact-option__link">hello@thecreativedev.ca</a>
+                </div>
+                
+                <div class="contact-option">
+                    <div class="contact-option__icon bg-medium-brown"></div>
+                    <h3 class="features-title mb-3">Content Contributions</h3>
+                    <p class="body-text text-sm mb-4">Want to write a blog post, share your story, or contribute resources for fellow students?</p>
+                    <a href="mailto:contribute@thecreativedev.ca" class="contact-option__link">contribute@thecreativedev.ca</a>
+                </div>
+                
+                <div class="contact-option">
+                    <div class="contact-option__icon bg-slate-blue"></div>
+                    <h3 class="features-title mb-3">Join the Team</h3>
+                    <p class="body-text text-sm mb-4">Interested in becoming a core team member and helping build The Creative Dev platform?</p>
+                    <a href="mailto:join@thecreativedev.ca" class="contact-option__link">join@thecreativedev.ca</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 md:py-20 bg-cream">
+        <div class="section-container">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading mb-4">Send Us a Message</h2>
+                    <p class="body-text max-w-2xl mx-auto">Use the form below to get in touch. We typically respond within 24 hours during the school year.</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mb-6">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" name="subject" class="form-input" required>
+                            <option value="">Select a topic...</option>
+                            <option value="general">General Question</option>
+                            <option value="contribute">Content Contribution</option>
+                            <option value="join-team">Join the Team</option>
+                            <option value="resource-request">Resource Request</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group mb-8">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" rows="6" class="form-input" placeholder="Tell us more about your question or how you'd like to get involved..." required></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Contribute -->
+    <section class="py-16 md:py-20">
+        <div class="section-container">
+            <div class="text-center mb-12">
+                <h2 class="section-heading mb-4">Ways to Contribute</h2>
+                <p class="body-text max-w-2xl mx-auto">There are many ways to support fellow New Media students, regardless of your experience level or available time.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="contribution-card">
+                    <div class="contribution-card__icon bg-slate-blue"></div>
+                    <h3 class="features-title mb-3">Share Your Experience</h3>
+                    <p class="body-text text-sm">Write about your program journey, challenges, and successes to help future students.</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-card__icon bg-medium-brown"></div>
+                    <h3 class="features-title mb-3">Create Study Resources</h3>
+                    <p class="body-text text-sm">Develop study guides, cheat sheets, or tutorials for challenging courses.</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-card__icon bg-slate-blue"></div>
+                    <h3 class="features-title mb-3">Offer Peer Tutoring</h3>
+                    <p class="body-text text-sm">Help struggling students with subjects you've mastered.</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <div class="contribution-card__icon bg-medium-brown"></div>
+                    <h3 class="features-title mb-3">Join the Core Team</h3>
+                    <p class="body-text text-sm">Help build and maintain The Creative Dev platform and community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Contact -->
+    <section class="py-16 md:py-20 bg-slate-blue text-white">
+        <div class="section-container">
+            <div class="text-center mb-12">
+                <h2 class="section-heading text-white mb-4">Meet the Core Team</h2>
+                <p class="body-text text-cream max-w-2xl mx-auto">Get to know the students behind The Creative Dev and how to reach them directly.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="team-contact-card">
+                    <div class="team-contact-card__avatar"></div>
+                    <h3 class="features-title text-white mb-2">Sarah Chen</h3>
+                    <p class="text-cream text-sm mb-4">Founder & Content Lead</p>
+                    <div class="team-contact-card__links">
+                        <a href="mailto:sarah@thecreativedev.ca" class="team-contact-card__link">Email</a>
+                        <a href="#" class="team-contact-card__link">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="team-contact-card">
+                    <div class="team-contact-card__avatar"></div>
+                    <h3 class="features-title text-white mb-2">Marcus Rodriguez</h3>
+                    <p class="text-cream text-sm mb-4">Resource Coordinator</p>
+                    <div class="team-contact-card__links">
+                        <a href="mailto:marcus@thecreativedev.ca" class="team-contact-card__link">Email</a>
+                        <a href="#" class="team-contact-card__link">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="team-contact-card">
+                    <div class="team-contact-card__avatar"></div>
+                    <h3 class="features-title text-white mb-2">Emma Thompson</h3>
+                    <p class="text-cream text-sm mb-4">Community Manager</p>
+                    <div class="team-contact-card__links">
+                        <a href="mailto:emma@thecreativedev.ca" class="team-contact-card__link">Email</a>
+                        <a href="#" class="team-contact-card__link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-white py-12">
+        <div class="section-container">
+            <div class="text-center">
+                <img src="logos/logo-white.svg" alt="The Creative Dev" class="h-8 mx-auto mb-6">
+                <p class="body-text text-cream mb-4">Supporting BCIT New Media students through peer-created resources and community.</p>
+                <p class="text-cream text-sm">&copy; 2024 The Creative Dev. Made by students, for students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

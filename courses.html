@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - The Creative Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 shadow-sm">
+        <div class="section-container flex justify-between items-center">
+            <div class="nav-logo">
+                <img src="logos/logo-darkbrown.svg" alt="The Creative Dev" class="h-8">
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="program-hub.html" class="nav-link">Program Hub</a>
+                <a href="courses.html" class="nav-link nav-link--active">Courses</a>
+                <a href="community.html" class="nav-link">Community</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-medium-brown text-white py-16 md:py-24">
+        <div class="section-container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="hero-title mb-6">Course Breakdown</h1>
+                <p class="hero-subtitle text-cream">Honest insights into each course from students who've been there, including tips for success and what you'll actually learn.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Filter -->
+    <section class="py-8 bg-cream">
+        <div class="section-container">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-button filter-button--active" data-filter="all">All Courses</button>
+                <button class="filter-button" data-filter="year1">Year 1</button>
+                <button class="filter-button" data-filter="year2">Year 2</button>
+                <button class="filter-button" data-filter="design">Design</button>
+                <button class="filter-button" data-filter="development">Development</button>
+                <button class="filter-button" data-filter="business">Business</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="py-16 md:py-20">
+        <div class="section-container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Course Card 1 -->
+                <div class="course-card" data-categories="year1 development">
+                    <div class="course-card__header">
+                        <div class="course-card__level">Year 1 • Term 1</div>
+                        <h3 class="features-title">Web Development 1</h3>
+                        <div class="course-card__code">MDIA 1620</div>
+                    </div>
+                    <div class="course-card__content">
+                        <p class="body-text text-sm mb-4">Your introduction to HTML, CSS, and the fundamentals of web development. Expect to build several static websites.</p>
+                        <div class="course-card__difficulty">
+                            <span class="text-sm text-medium-brown">Difficulty:</span>
+                            <div class="difficulty-bar">
+                                <div class="difficulty-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="text-sm text-medium-brown">Beginner</span>
+                        </div>
+                        <div class="course-card__tips">
+                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
+                            <ul class="text-sm text-medium-brown space-y-1">
+                                <li>• Practice coding every day, even if just 30 minutes</li>
+                                <li>• Don't skip the reading assignments</li>
+                                <li>• Ask questions early and often</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="course-card" data-categories="year1 design">
+                    <div class="course-card__header">
+                        <div class="course-card__level">Year 1 • Term 1</div>
+                        <h3 class="features-title">Digital Design</h3>
+                        <div class="course-card__code">MDIA 1040</div>
+                    </div>
+                    <div class="course-card__content">
+                        <p class="body-text text-sm mb-4">Design fundamentals including color theory, typography, and composition using Adobe Creative Suite.</p>
+                        <div class="course-card__difficulty">
+                            <span class="text-sm text-medium-brown">Difficulty:</span>
+                            <div class="difficulty-bar">
+                                <div class="difficulty-fill" style="width: 50%"></div>
+                            </div>
+                            <span class="text-sm text-medium-brown">Moderate</span>
+                        </div>
+                        <div class="course-card__tips">
+                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
+                            <ul class="text-sm text-medium-brown space-y-1">
+                                <li>• Study design everywhere - apps, websites, posters</li>
+                                <li>• Master Photoshop shortcuts early</li>
+                                <li>• Keep a design inspiration collection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="course-card" data-categories="year1 development">
+                    <div class="course-card__header">
+                        <div class="course-card__level">Year 1 • Term 2</div>
+                        <h3 class="features-title">Web Development 2</h3>
+                        <div class="course-card__code">MDIA 2109</div>
+                    </div>
+                    <div class="course-card__content">
+                        <p class="body-text text-sm mb-4">JavaScript fundamentals, DOM manipulation, and your first interactive web applications.</p>
+                        <div class="course-card__difficulty">
+                            <span class="text-sm text-medium-brown">Difficulty:</span>
+                            <div class="difficulty-bar">
+                                <div class="difficulty-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="text-sm text-medium-brown">Challenging</span>
+                        </div>
+                        <div class="course-card__tips">
+                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
+                            <ul class="text-sm text-medium-brown space-y-1">
+                                <li>• JavaScript concepts take time - be patient</li>
+                                <li>• Use console.log() liberally for debugging</li>
+                                <li>• Work through problems step by step</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="course-card" data-categories="year1 business">
+                    <div class="course-card__header">
+                        <div class="course-card__level">Year 1 • Term 2</div>
+                        <h3 class="features-title">Project Management</h3>
+                        <div class="course-card__code">MDIA 1128</div>
+                    </div>
+                    <div class="course-card__content">
+                        <p class="body-text text-sm mb-4">Learn project planning, client communication, and workflow management essential for creative projects.</p>
+                        <div class="course-card__difficulty">
+                            <span class="text-sm text-medium-brown">Difficulty:</span>
+                            <div class="difficulty-bar">
+                                <div class="difficulty-fill" style="width: 35%"></div>
+                            </div>
+                            <span class="text-sm text-medium-brown">Easy</span>
+                        </div>
+                        <div class="course-card__tips">
+                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
+                            <ul class="text-sm text-medium-brown space-y-1">
+                                <li>• Apply concepts to your other course projects</li>
+                                <li>• Actually use the tools taught (Asana, Slack, etc.)</li>
+                                <li>• Take client communication seriously</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="course-card" data-categories="year2 development">
+                    <div class="course-card__header">
+                        <div class="course-card__level">Year 2 • Term 1</div>
+                        <h3 class="features-title">Advanced JavaScript</h3>
+                        <div class="course-card__code">MDIA 3126</div>
+                    </div>
+                    <div class="course-card__content">
+                        <p class="body-text text-sm mb-4">ES6+, APIs, frameworks like React or Vue, and building complex interactive applications.</p>
+                        <div class="course-card__difficulty">
+                            <span class="text-sm text-medium-brown">Difficulty:</span>
+                            <div class="difficulty-bar">
+                                <div class="difficulty-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="text-sm text-medium-brown">Very Hard</span>
+                        </div>
+                        <div class="course-card__tips">
+                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
+                            <ul class="text-sm text-medium-brown space-y-1">
+                                <li>• Review JS fundamentals before term starts</li>
+                                <li>• Build personal projects to practice concepts</li>
+                                <li>• Form study groups - you'll need them</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="course-card" data-categories="year2 development">
+                    <div class="course-card__header">
+                        <div class="course-card__level">Year 2 • Term 2</div>
+                        <h3 class="features-title">Backend Development</h3>
+                        <div class="course-card__code">MDIA 3280</div>
+                    </div>
+                    <div class="course-card__content">
+                        <p class="body-text text-sm mb-4">Node.js, databases, APIs, and server-side development. Your introduction to full-stack thinking.</p>
+                        <div class="course-card__difficulty">
+                            <span class="text-sm text-medium-brown">Difficulty:</span>
+                            <div class="difficulty-bar">
+                                <div class="difficulty-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="text-sm text-medium-brown">Hard</span>
+                        </div>
+                        <div class="course-card__tips">
+                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
+                            <ul class="text-sm text-medium-brown space-y-1">
+                                <li>• Understand the request-response cycle first</li>
+                                <li>• Practice SQL queries outside of class</li>
+                                <li>• Use Postman to test your APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Resources -->
+    <section class="py-16 md:py-20 bg-cream">
+        <div class="section-container">
+            <div class="text-center mb-12">
+                <h2 class="section-heading mb-4">Study Resources</h2>
+                <p class="body-text max-w-2xl mx-auto">Student-created resources to help you succeed in each course.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="w-12 h-12 bg-slate-blue rounded-lg mx-auto mb-4"></div>
+                    <h3 class="features-title mb-2">Study Guides</h3>
+                    <p class="body-text text-sm mb-4">Comprehensive notes and summaries for each course.</p>
+                    <a href="#" class="text-slate-blue text-sm font-semibold">View Guides →</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="w-12 h-12 bg-medium-brown rounded-lg mx-auto mb-4"></div>
+                    <h3 class="features-title mb-2">Code Examples</h3>
+                    <p class="body-text text-sm mb-4">Working code samples from successful student projects.</p>
+                    <a href="#" class="text-slate-blue text-sm font-semibold">Browse Code →</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="w-12 h-12 bg-slate-blue rounded-lg mx-auto mb-4"></div>
+                    <h3 class="features-title mb-2">Assignment Tips</h3>
+                    <p class="body-text text-sm mb-4">Strategies and approaches for major assignments.</p>
+                    <a href="#" class="text-slate-blue text-sm font-semibold">Get Tips →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-white py-12">
+        <div class="section-container">
+            <div class="text-center">
+                <img src="logos/logo-white.svg" alt="The Creative Dev" class="h-8 mx-auto mb-6">
+                <p class="body-text text-cream mb-4">Supporting BCIT New Media students through peer-created resources and community.</p>
+                <p class="text-cream text-sm">&copy; 2024 The Creative Dev. Made by students, for students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

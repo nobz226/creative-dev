@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News - The Creative Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 shadow-sm">
+        <div class="section-container flex justify-between items-center">
+            <div class="nav-logo">
+                <img src="logos/logo-darkbrown.svg" alt="The Creative Dev" class="h-8">
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="program-hub.html" class="nav-link">Program Hub</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="community.html" class="nav-link">Community</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="blog.html" class="nav-link nav-link--active">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-dark-brown text-white py-16 md:py-24">
+        <div class="section-container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="hero-title mb-6">Blog & News</h1>
+                <p class="hero-subtitle text-cream">Stay updated with student stories, program insights, industry trends, and practical advice for thriving in New Media at BCIT.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <section class="py-8 bg-cream">
+        <div class="section-container">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="blog-filter blog-filter--active" data-category="all">All Posts</button>
+                <button class="blog-filter" data-category="student-stories">Student Stories</button>
+                <button class="blog-filter" data-category="tutorials">Tutorials</button>
+                <button class="blog-filter" data-category="industry-news">Industry News</button>
+                <button class="blog-filter" data-category="program-updates">Program Updates</button>
+                <button class="blog-filter" data-category="career-advice">Career Advice</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-16 md:py-20">
+        <div class="section-container">
+            <div class="featured-post">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="featured-post__image"></div>
+                    <div class="featured-post__content">
+                        <div class="featured-post__category">Student Stories</div>
+                        <h2 class="section-heading mb-4">How I Landed My Dream Job Before Graduation</h2>
+                        <p class="body-text mb-6">Follow Marcus Rodriguez's journey from struggling first-year student to landing a full-time position at a Vancouver tech company while still completing his final term.</p>
+                        <div class="featured-post__meta">
+                            <span class="text-medium-brown text-sm">By Marcus Rodriguez</span>
+                            <span class="text-medium-brown text-sm">•</span>
+                            <span class="text-medium-brown text-sm">October 5, 2024</span>
+                            <span class="text-medium-brown text-sm">•</span>
+                            <span class="text-medium-brown text-sm">8 min read</span>
+                        </div>
+                        <a href="#" class="cta-button mt-6 inline-block">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-16 md:py-20 bg-cream">
+        <div class="section-container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="blog-card" data-category="tutorials">
+                    <div class="blog-card__image"></div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__category">Tutorial</div>
+                        <h3 class="features-title mb-3">Building Your First React Component</h3>
+                        <p class="body-text text-sm mb-4">A step-by-step guide to creating reusable components, perfect for students just starting with React in their second year.</p>
+                        <div class="blog-card__meta">
+                            <span class="text-xs text-medium-brown">Sarah Kim • Oct 3, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="career-advice">
+                    <div class="blog-card__image"></div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__category">Career Advice</div>
+                        <h3 class="features-title mb-3">Portfolio Projects That Actually Get You Hired</h3>
+                        <p class="body-text text-sm mb-4">Alumni share the portfolio pieces that helped them land their first jobs and explain what makes projects stand out.</p>
+                        <div class="blog-card__meta">
+                            <span class="text-xs text-medium-brown">Jennifer Martinez • Oct 1, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="industry-news">
+                    <div class="blog-card__image"></div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__category">Industry News</div>
+                        <h3 class="features-title mb-3">Vancouver Tech Scene: What's Hot in 2024</h3>
+                        <p class="body-text text-sm mb-4">Local industry professionals discuss emerging trends and what skills are in demand for new graduates.</p>
+                        <div class="blog-card__meta">
+                            <span class="text-xs text-medium-brown">David Park • Sep 28, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="student-stories">
+                    <div class="blog-card__image"></div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__category">Student Stories</div>
+                        <h3 class="features-title mb-3">Surviving Your First Group Project</h3>
+                        <p class="body-text text-sm mb-4">Real strategies from students on how to navigate team dynamics, manage conflicts, and deliver successful projects.</p>
+                        <div class="blog-card__meta">
+                            <span class="text-xs text-medium-brown">Alex Thompson • Sep 25, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="program-updates">
+                    <div class="blog-card__image"></div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__category">Program Updates</div>
+                        <h3 class="features-title mb-3">New Curriculum Changes for 2025</h3>
+                        <p class="body-text text-sm mb-4">Overview of upcoming program updates including new courses, technology focus areas, and industry partnerships.</p>
+                        <div class="blog-card__meta">
+                            <span class="text-xs text-medium-brown">Program Team • Sep 20, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="tutorials">
+                    <div class="blog-card__image"></div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__category">Tutorial</div>
+                        <h3 class="features-title mb-3">Git & GitHub for New Media Students</h3>
+                        <p class="body-text text-sm mb-4">Master version control with this comprehensive guide covering everything from basic commands to collaborative workflows.</p>
+                        <div class="blog-card__meta">
+                            <span class="text-xs text-medium-brown">Marcus Rodriguez • Sep 18, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 md:py-20 bg-slate-blue text-white">
+        <div class="section-container text-center">
+            <h2 class="section-heading text-white mb-6">Stay Updated</h2>
+            <p class="body-text text-cream max-w-2xl mx-auto mb-8">Get weekly updates with new blog posts, upcoming events, and program announcements delivered to your inbox.</p>
+            
+            <form class="newsletter-form">
+                <div class="newsletter-form__input-group">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-form__input" required>
+                    <button type="submit" class="newsletter-form__button">Subscribe</button>
+                </div>
+                <p class="text-cream text-xs mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Recent Events -->
+    <section class="py-16 md:py-20">
+        <div class="section-container">
+            <h2 class="section-heading text-center mb-12">Recent Events</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="event-card">
+                    <div class="event-card__date">
+                        <div class="event-card__month">Oct</div>
+                        <div class="event-card__day">15</div>
+                    </div>
+                    <div class="event-card__content">
+                        <h3 class="features-title mb-2">Portfolio Review Session</h3>
+                        <p class="body-text text-sm mb-3">Get feedback from industry professionals and recent graduates on your portfolio projects.</p>
+                        <div class="event-card__details">
+                            <span class="text-xs text-medium-brown">6:00 PM • SW1 Room 1650</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-card__date">
+                        <div class="event-card__month">Oct</div>
+                        <div class="event-card__day">22</div>
+                    </div>
+                    <div class="event-card__content">
+                        <h3 class="features-title mb-2">Industry Panel Discussion</h3>
+                        <p class="body-text text-sm mb-3">Vancouver tech leaders discuss current trends and what they look for in new hires.</p>
+                        <div class="event-card__details">
+                            <span class="text-xs text-medium-brown">7:00 PM • Virtual Event</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-card__date">
+                        <div class="event-card__month">Nov</div>
+                        <div class="event-card__day">5</div>
+                    </div>
+                    <div class="event-card__content">
+                        <h3 class="features-title mb-2">JavaScript Workshop</h3>
+                        <p class="body-text text-sm mb-3">Hands-on workshop covering advanced JavaScript concepts for second-year students.</p>
+                        <div class="event-card__details">
+                            <span class="text-xs text-medium-brown">2:00 PM • SW1 Room 1650</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-white py-12">
+        <div class="section-container">
+            <div class="text-center">
+                <img src="logos/logo-white.svg" alt="The Creative Dev" class="h-8 mx-auto mb-6">
+                <p class="body-text text-cream mb-4">Supporting BCIT New Media students through peer-created resources and community.</p>
+                <p class="text-cream text-sm">&copy; 2024 The Creative Dev. Made by students, for students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

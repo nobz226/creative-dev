@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resources - The Creative Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 shadow-sm">
+        <div class="section-container flex justify-between items-center">
+            <div class="nav-logo">
+                <img src="logos/logo-darkbrown.svg" alt="The Creative Dev" class="h-8">
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="program-hub.html" class="nav-link">Program Hub</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="community.html" class="nav-link">Community</a>
+                <a href="resources.html" class="nav-link nav-link--active">Resources</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-cream py-16 md:py-24">
+        <div class="section-container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="hero-title mb-6">Student Resources</h1>
+                <p class="hero-subtitle text-dark-brown">Essential tools, guides, and support to help you succeed in your BCIT New Media journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access -->
+    <section class="py-16 md:py-20">
+        <div class="section-container">
+            <div class="text-center mb-12">
+                <h2 class="section-heading mb-4">Quick Access</h2>
+                <p class="body-text max-w-2xl mx-auto">Jump straight to the resources you need most.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#mental-health" class="quick-access-card">
+                    <div class="quick-access-card__icon bg-slate-blue"></div>
+                    <h3 class="features-title text-sm">Mental Health</h3>
+                </a>
+                <a href="#software" class="quick-access-card">
+                    <div class="quick-access-card__icon bg-medium-brown"></div>
+                    <h3 class="features-title text-sm">Software & Tools</h3>
+                </a>
+                <a href="#study-guides" class="quick-access-card">
+                    <div class="quick-access-card__icon bg-slate-blue"></div>
+                    <h3 class="features-title text-sm">Study Guides</h3>
+                </a>
+                <a href="#tutoring" class="quick-access-card">
+                    <div class="quick-access-card__icon bg-medium-brown"></div>
+                    <h3 class="features-title text-sm">Peer Tutoring</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mental Health Resources -->
+    <section id="mental-health" class="py-16 md:py-20 bg-slate-blue/10">
+        <div class="section-container">
+            <h2 class="section-heading mb-8">Mental Health & Wellness</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="features-title mb-4">On-Campus Support</h3>
+                    <div class="space-y-4">
+                        <div class="resource-item">
+                            <h4 class="resource-item__title">BCIT Counselling Services</h4>
+                            <p class="resource-item__description">Free, confidential counselling for all BCIT students</p>
+                            <div class="resource-item__details">
+                                <span>SW1 Building, Room 2930</span>
+                                <span>604-432-8675</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <h4 class="resource-item__title">Health Services</h4>
+                            <p class="resource-item__description">Medical care and health resources on campus</p>
+                            <div class="resource-item__details">
+                                <span>SW1 Building, Room 2940</span>
+                                <span>604-432-8940</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="features-title mb-4">External Resources</h3>
+                    <div class="space-y-4">
+                        <div class="resource-item">
+                            <h4 class="resource-item__title">Crisis Text Line</h4>
+                            <p class="resource-item__description">24/7 crisis support via text</p>
+                            <div class="resource-item__details">
+                                <span>Text HOME to 741741</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <h4 class="resource-item__title">Mind Shift App</h4>
+                            <p class="resource-item__description">Free anxiety and mood tracking app developed in BC</p>
+                            <div class="resource-item__details">
+                                <span>Available on iOS and Android</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-white rounded-lg">
+                <h3 class="features-title mb-3">Program-Specific Tips</h3>
+                <ul class="body-text space-y-2">
+                    <li>• The program is intense - burnout is common and normal</li>
+                    <li>• Take breaks between study sessions, even if it's just 5 minutes</li>
+                    <li>• Connect with classmates - shared stress is easier to manage</li>
+                    <li>• Remember: struggling doesn't mean you don't belong here</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software & Tools -->
+    <section id="software" class="py-16 md:py-20">
+        <div class="section-container">
+            <h2 class="section-heading mb-8">Software & Tools</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="features-title mb-4">Free for Students</h3>
+                    <div class="software-list">
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">Adobe Creative Cloud</h4>
+                                <p class="software-item__note">Free through BCIT license</p>
+                            </div>
+                        </div>
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">GitHub Pro</h4>
+                                <p class="software-item__note">Free with student email</p>
+                            </div>
+                        </div>
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">Figma Education</h4>
+                                <p class="software-item__note">Free professional plan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="features-title mb-4">Recommended Paid</h3>
+                    <div class="software-list">
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">Notion</h4>
+                                <p class="software-item__note">$10/month - Project organization</p>
+                            </div>
+                        </div>
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">Netlify Pro</h4>
+                                <p class="software-item__note">$19/month - Advanced hosting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="features-title mb-4">Free Alternatives</h3>
+                    <div class="software-list">
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">VS Code</h4>
+                                <p class="software-item__note">Free code editor</p>
+                            </div>
+                        </div>
+                        <div class="software-item">
+                            <div class="software-item__icon"></div>
+                            <div>
+                                <h4 class="software-item__name">GIMP</h4>
+                                <p class="software-item__note">Free Photoshop alternative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Resources -->
+    <section id="study-guides" class="py-16 md:py-20 bg-cream">
+        <div class="section-container">
+            <h2 class="section-heading mb-8">Study Guides & Materials</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="study-resource-card">
+                    <h3 class="features-title mb-3">JavaScript Fundamentals</h3>
+                    <p class="body-text text-sm mb-4">Complete guide covering ES6+, DOM manipulation, and common patterns.</p>
+                    <div class="study-resource-card__meta">
+                        <span class="text-xs text-medium-brown">Updated: Oct 2024</span>
+                        <a href="#" class="study-resource-card__download">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="study-resource-card">
+                    <h3 class="features-title mb-3">CSS Grid & Flexbox</h3>
+                    <p class="body-text text-sm mb-4">Visual guide with practical examples and common use cases.</p>
+                    <div class="study-resource-card__meta">
+                        <span class="text-xs text-medium-brown">Updated: Sep 2024</span>
+                        <a href="#" class="study-resource-card__download">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="study-resource-card">
+                    <h3 class="features-title mb-3">Design Principles Cheat Sheet</h3>
+                    <p class="body-text text-sm mb-4">Quick reference for color theory, typography, and layout principles.</p>
+                    <div class="study-resource-card__meta">
+                        <span class="text-xs text-medium-brown">Updated: Aug 2024</span>
+                        <a href="#" class="study-resource-card__download">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peer Tutoring -->
+    <section id="tutoring" class="py-16 md:py-20">
+        <div class="section-container">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="section-heading mb-6">Peer Tutoring Program</h2>
+                    <p class="body-text mb-6">Get help from upper-year students who've successfully completed the courses you're struggling with. All tutoring is free and provided by volunteers.</p>
+                    
+                    <div class="tutoring-subjects">
+                        <h3 class="features-title mb-4">Available Subjects:</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="tutoring-subject">JavaScript</div>
+                            <div class="tutoring-subject">HTML/CSS</div>
+                            <div class="tutoring-subject">Adobe Creative Suite</div>
+                            <div class="tutoring-subject">Portfolio Review</div>
+                            <div class="tutoring-subject">Project Planning</div>
+                            <div class="tutoring-subject">Career Prep</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-blue/10 p-8 rounded-lg">
+                    <h3 class="features-title mb-4">How It Works</h3>
+                    <div class="space-y-4">
+                        <div class="tutoring-step">
+                            <div class="tutoring-step__number">1</div>
+                            <p class="body-text text-sm">Fill out the tutoring request form</p>
+                        </div>
+                        <div class="tutoring-step">
+                            <div class="tutoring-step__number">2</div>
+                            <p class="body-text text-sm">We match you with an appropriate tutor</p>
+                        </div>
+                        <div class="tutoring-step">
+                            <div class="tutoring-step__number">3</div>
+                            <p class="body-text text-sm">Schedule sessions that work for both of you</p>
+                        </div>
+                        <div class="tutoring-step">
+                            <div class="tutoring-step__number">4</div>
+                            <p class="body-text text-sm">Meet in person or virtually</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="cta-button w-full text-center mt-6 block">Request a Tutor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-white py-12">
+        <div class="section-container">
+            <div class="text-center">
+                <img src="logos/logo-white.svg" alt="The Creative Dev" class="h-8 mx-auto mb-6">
+                <p class="body-text text-cream mb-4">Supporting BCIT New Media students through peer-created resources and community.</p>
+                <p class="text-cream text-sm">&copy; 2024 The Creative Dev. Made by students, for students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
