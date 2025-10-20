@@ -1163,14 +1163,6 @@ video {
   background-color: rgb(162 213 67 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gradient-to-br {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1282,11 +1274,6 @@ video {
 .py-\[clamp\(4rem\2c 8vw\2c 6rem\)\] {
   padding-top: clamp(4rem,8vw,6rem);
   padding-bottom: clamp(4rem,8vw,6rem);
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .pt-2 {
@@ -1477,11 +1464,6 @@ video {
 .text-yellow-green {
   --tw-text-opacity: 1;
   color: rgb(162 213 67 / var(--tw-text-opacity, 1));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .no-underline {
@@ -1682,16 +1664,6 @@ video {
   .md\:py-\[clamp\(6rem\2c 10vw\2c 8rem\)\] {
     padding-top: clamp(6rem,10vw,8rem);
     padding-bottom: clamp(6rem,10vw,8rem);
-  }
-
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .md\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
   }
 }
 
