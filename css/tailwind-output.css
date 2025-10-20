@@ -1049,6 +1049,10 @@ video {
   background-color: rgb(162 213 67 / var(--tw-bg-opacity, 1));
 }
 
+.bg-sapphire-blue\/10 {
+  background-color: rgb(18 85 171 / 0.1);
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1231,6 +1235,10 @@ video {
 
 .text-section-title {
   font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.text-\[0\.875rem\] {
+  font-size: 0.875rem;
 }
 
 .font-bold {
