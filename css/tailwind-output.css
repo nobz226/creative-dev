@@ -831,6 +831,14 @@ video {
   height: 6rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .min-h-\[4\.5rem\] {
   min-height: 4.5rem;
 }
@@ -1147,6 +1155,10 @@ video {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.bg-light-gray\/20 {
+  background-color: rgb(166 166 168 / 0.2);
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1280,6 +1292,10 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {

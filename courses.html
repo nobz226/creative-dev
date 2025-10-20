@@ -3,324 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - The Creative Dev</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Courses - PathwayHub</title>
+    <meta name="description" content="Honest insights into each BCIT New Media course from students who've been there, including tips for success and what you'll actually learn">
+    <link rel="stylesheet" href="css/tailwind-output.css">
 </head>
-<body>
-     <!-- Navigation -->
-    <nav class="nav-container">
-        <div class="nav-wrapper">
-            <div class="nav-content">
-                <!-- Logo -->
-                <div class="logo-container">
-                    <div class="logo-text">
-                        <img src="logos/logo-darkbrown.svg" alt="Logo" class="logo-svg">
-                        <a href="index.html" style="text-decoration: none; color: inherit;"></a>
+<body class="font-dm-sans font-light bg-ghost-white text-eerie-black m-0 p-0 leading-body scroll-smooth">
+
+    <!-- Navigation -->
+    <nav class="bg-ghost-white shadow-nav sticky top-0 z-50">
+        <div class="max-w-container mx-auto px-4">
+            <div class="flex justify-between items-center h-[4.5rem] min-h-[4.5rem] gap-4">
+                <!-- Logo container -->
+                <a href="index.html" class="flex items-center flex-shrink-0 flex-none gap-2">
+                    <img src="logos/logo-darkbrown.svg" alt="PathwayHub Logo" class="h-[clamp(3.5rem,5vw,4rem)] w-auto flex-shrink-0">
+                    <div class="flex flex-col justify-center gap-0.5">
+                        <h1 class="font-futura-extrabold text-[clamp(1rem,2vw,1.4rem)] text-sapphire-blue uppercase tracking-futura-extra leading-none m-0">
+                            PathwayHub
+                        </h1>
+                        <h3 class="font-futura-medium text-[clamp(0.6rem,1.2vw,0.75rem)] text-yellow-green uppercase tracking-futura-med leading-none m-0">
+                            BCIT Media and Web Development
+                        </h3>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex flex-1 justify-end max-w-[800px]">
+                    <div class="flex items-center justify-end gap-[clamp(0.5rem,1.5vw,1rem)] flex-wrap">
+                        <a href="about.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">About</a>
+                        <a href="program-hub.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Program-Hub</a>
+                        <a href="courses.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Courses</a>
+                        <a href="resources.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Resources</a>
+                        <a href="community.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Community</a>
+                        <a href="blog.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Blog/News</a>
+                        <a href="contact.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Contact</a>
                     </div>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <div class="desktop-nav">
-                    <div class="nav-links">
-                        <a href="index.html" class="nav-link">Home</a>
-                        <a href="about.html" class="nav-link">About</a>
-                        <a href="program-hub.html" class="nav-link">Program Hub</a>
-                        <a href="community.html" class="nav-link">Community</a>
-                        <a href="resources.html" class="nav-link">Student Resources</a>
-                        <a href="blog.html" class="nav-link">Blog/News</a>
-                        <a href="contact.html" class="nav-link">Contact/Join</a>
-                    </div>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="mobile-menu-button">
-                    <button id="mobile-menu-btn" class="menu-btn">
-                        <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex-shrink-0">
+                    <button id="mobile-menu-btn" class="text-eerie-black bg-transparent border-0 cursor-pointer p-2 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="mobile-nav hidden">
-            <div class="mobile-nav-links">
-                <a href="index.html" class="mobile-nav-link">Home</a>
-                <a href="about.html" class="mobile-nav-link">About</a>
-                <a href="program-hub.html" class="mobile-nav-link">Program Hub</a>
-                <a href="community.html" class="mobile-nav-link">Community</a>
-                <a href="resources.html" class="mobile-nav-link">Student Resources</a>
-                <a href="blog.html" class="mobile-nav-link">Blog/News</a>
-                <a href="contact.html" class="mobile-nav-link">Contact/Join</a>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-ghost-white border-t border-light-gray shadow-md">
+            <div class="p-4 flex flex-col gap-1">
+                <a href="about.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">About</a>
+                <a href="program-hub.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Program-Hub</a>
+                <a href="courses.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Courses</a>
+                <a href="resources.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Resources</a>
+                <a href="community.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Community</a>
+                <a href="blog.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Blog/News</a>
+                <a href="contact.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-medium-brown text-white py-16 md:py-24">
-        <div class="section-container">
+    <section class="bg-light-gray text-ghost-white py-[clamp(4rem,8vw,6rem)] md:py-[clamp(6rem,10vw,8rem)]">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center max-w-4xl mx-auto">
-                <h1 class="hero-title mb-6">Course Breakdown</h1>
-                <p class="hero-subtitle text-cream">Honest insights into each course from students who've been there, including tips for success and what you'll actually learn.</p>
+                <h1 class="font-futura-extrabold text-hero-title uppercase tracking-futura-extra leading-title mb-6">
+                    COURSE BREAKDOWN
+                </h1>
+                <p class="font-dm-sans font-light text-hero-subtitle leading-normal text-ghost-white">
+                    Honest insights into each course from students who've been there, including tips for success and what you'll actually learn.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Course Filter -->
-    <section class="py-8 bg-cream">
-        <div class="section-container">
+    <section class="py-8 bg-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="flex flex-wrap justify-center gap-4">
-                <button class="filter-button filter-button--active" data-filter="all">All Courses</button>
-                <button class="filter-button" data-filter="year1">Year 1</button>
-                <button class="filter-button" data-filter="year2">Year 2</button>
-                <button class="filter-button" data-filter="design">Design</button>
-                <button class="filter-button" data-filter="development">Development</button>
-                <button class="filter-button" data-filter="business">Business</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard bg-sapphire-blue text-ghost-white border-sapphire-blue hover:bg-sapphire-blue/90" data-filter="all">All Courses</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-filter="year1">Year 1</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-filter="year2">Year 2</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-filter="design">Design</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-filter="development">Development</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-filter="business">Business</button>
             </div>
         </div>
     </section>
 
     <!-- Courses Grid -->
-    <section class="py-16 md:py-20">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Course Card 1 -->
-                <div class="course-card" data-categories="year1 development">
-                    <div class="course-card__header">
-                        <div class="course-card__level">Year 1 • Term 1</div>
-                        <h3 class="features-title">Web Development 1</h3>
-                        <div class="course-card__code">MDIA 1620</div>
-                    </div>
-                    <div class="course-card__content">
-                        <p class="body-text text-sm mb-4">Your introduction to HTML, CSS, and the fundamentals of web development. Expect to build several static websites.</p>
-                        <div class="course-card__difficulty">
-                            <span class="text-sm text-medium-brown">Difficulty:</span>
-                            <div class="difficulty-bar">
-                                <div class="difficulty-fill" style="width: 40%"></div>
+                <article class="bg-ghost-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-categories="year1 development">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="inline-block py-1 px-3 bg-sapphire-blue/20 text-sapphire-blue text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                                Year 1 • Term 1
                             </div>
-                            <span class="text-sm text-medium-brown">Beginner</span>
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Web Development 1
+                            </h3>
+                            <div class="text-light-gray text-sm font-futura-medium uppercase tracking-futura-med">MDIA 1620</div>
                         </div>
-                        <div class="course-card__tips">
-                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
-                            <ul class="text-sm text-medium-brown space-y-1">
+                        
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Your introduction to HTML, CSS, and the fundamentals of web development. Expect to build several static websites.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between text-sm text-light-gray mb-2">
+                                <span class="font-futura-medium uppercase tracking-futura-med">Difficulty:</span>
+                                <span class="font-futura-medium uppercase tracking-futura-med">Beginner</span>
+                            </div>
+                            <div class="h-2 bg-light-gray/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-green rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-light-gray/20 pt-4">
+                            <h4 class="text-sm font-futura-medium uppercase tracking-futura-med text-eerie-black mb-3">Student Tips:</h4>
+                            <ul class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black space-y-2">
                                 <li>• Practice coding every day, even if just 30 minutes</li>
                                 <li>• Don't skip the reading assignments</li>
                                 <li>• Ask questions early and often</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 2 -->
-                <div class="course-card" data-categories="year1 design">
-                    <div class="course-card__header">
-                        <div class="course-card__level">Year 1 • Term 1</div>
-                        <h3 class="features-title">Digital Design</h3>
-                        <div class="course-card__code">MDIA 1040</div>
-                    </div>
-                    <div class="course-card__content">
-                        <p class="body-text text-sm mb-4">Design fundamentals including color theory, typography, and composition using Adobe Creative Suite.</p>
-                        <div class="course-card__difficulty">
-                            <span class="text-sm text-medium-brown">Difficulty:</span>
-                            <div class="difficulty-bar">
-                                <div class="difficulty-fill" style="width: 50%"></div>
+                <article class="bg-ghost-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-categories="year1 design">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="inline-block py-1 px-3 bg-sapphire-blue/20 text-sapphire-blue text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                                Year 1 • Term 1
                             </div>
-                            <span class="text-sm text-medium-brown">Moderate</span>
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Digital Design
+                            </h3>
+                            <div class="text-light-gray text-sm font-futura-medium uppercase tracking-futura-med">MDIA 1040</div>
                         </div>
-                        <div class="course-card__tips">
-                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
-                            <ul class="text-sm text-medium-brown space-y-1">
+                        
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Design fundamentals including color theory, typography, and composition using Adobe Creative Suite.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between text-sm text-light-gray mb-2">
+                                <span class="font-futura-medium uppercase tracking-futura-med">Difficulty:</span>
+                                <span class="font-futura-medium uppercase tracking-futura-med">Moderate</span>
+                            </div>
+                            <div class="h-2 bg-light-gray/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-green rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-light-gray/20 pt-4">
+                            <h4 class="text-sm font-futura-medium uppercase tracking-futura-med text-eerie-black mb-3">Student Tips:</h4>
+                            <ul class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black space-y-2">
                                 <li>• Study design everywhere - apps, websites, posters</li>
                                 <li>• Master Photoshop shortcuts early</li>
                                 <li>• Keep a design inspiration collection</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 3 -->
-                <div class="course-card" data-categories="year1 development">
-                    <div class="course-card__header">
-                        <div class="course-card__level">Year 1 • Term 2</div>
-                        <h3 class="features-title">Web Development 2</h3>
-                        <div class="course-card__code">MDIA 2109</div>
-                    </div>
-                    <div class="course-card__content">
-                        <p class="body-text text-sm mb-4">JavaScript fundamentals, DOM manipulation, and your first interactive web applications.</p>
-                        <div class="course-card__difficulty">
-                            <span class="text-sm text-medium-brown">Difficulty:</span>
-                            <div class="difficulty-bar">
-                                <div class="difficulty-fill" style="width: 70%"></div>
+                <article class="bg-ghost-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-categories="year1 development">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="inline-block py-1 px-3 bg-sapphire-blue/20 text-sapphire-blue text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                                Year 1 • Term 2
                             </div>
-                            <span class="text-sm text-medium-brown">Challenging</span>
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Web Development 2
+                            </h3>
+                            <div class="text-light-gray text-sm font-futura-medium uppercase tracking-futura-med">MDIA 2109</div>
                         </div>
-                        <div class="course-card__tips">
-                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
-                            <ul class="text-sm text-medium-brown space-y-1">
+                        
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            JavaScript fundamentals, DOM manipulation, and your first interactive web applications.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between text-sm text-light-gray mb-2">
+                                <span class="font-futura-medium uppercase tracking-futura-med">Difficulty:</span>
+                                <span class="font-futura-medium uppercase tracking-futura-med">Challenging</span>
+                            </div>
+                            <div class="h-2 bg-light-gray/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-green rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-light-gray/20 pt-4">
+                            <h4 class="text-sm font-futura-medium uppercase tracking-futura-med text-eerie-black mb-3">Student Tips:</h4>
+                            <ul class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black space-y-2">
                                 <li>• JavaScript concepts take time - be patient</li>
                                 <li>• Use console.log() liberally for debugging</li>
                                 <li>• Work through problems step by step</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 4 -->
-                <div class="course-card" data-categories="year1 business">
-                    <div class="course-card__header">
-                        <div class="course-card__level">Year 1 • Term 2</div>
-                        <h3 class="features-title">Project Management</h3>
-                        <div class="course-card__code">MDIA 1128</div>
-                    </div>
-                    <div class="course-card__content">
-                        <p class="body-text text-sm mb-4">Learn project planning, client communication, and workflow management essential for creative projects.</p>
-                        <div class="course-card__difficulty">
-                            <span class="text-sm text-medium-brown">Difficulty:</span>
-                            <div class="difficulty-bar">
-                                <div class="difficulty-fill" style="width: 35%"></div>
+                <article class="bg-ghost-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-categories="year1 business">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="inline-block py-1 px-3 bg-sapphire-blue/20 text-sapphire-blue text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                                Year 1 • Term 2
                             </div>
-                            <span class="text-sm text-medium-brown">Easy</span>
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Project Management
+                            </h3>
+                            <div class="text-light-gray text-sm font-futura-medium uppercase tracking-futura-med">MDIA 1128</div>
                         </div>
-                        <div class="course-card__tips">
-                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
-                            <ul class="text-sm text-medium-brown space-y-1">
+                        
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Learn project planning, client communication, and workflow management essential for creative projects.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between text-sm text-light-gray mb-2">
+                                <span class="font-futura-medium uppercase tracking-futura-med">Difficulty:</span>
+                                <span class="font-futura-medium uppercase tracking-futura-med">Easy</span>
+                            </div>
+                            <div class="h-2 bg-light-gray/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-green rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-light-gray/20 pt-4">
+                            <h4 class="text-sm font-futura-medium uppercase tracking-futura-med text-eerie-black mb-3">Student Tips:</h4>
+                            <ul class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black space-y-2">
                                 <li>• Apply concepts to your other course projects</li>
                                 <li>• Actually use the tools taught (Asana, Slack, etc.)</li>
                                 <li>• Take client communication seriously</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 5 -->
-                <div class="course-card" data-categories="year2 development">
-                    <div class="course-card__header">
-                        <div class="course-card__level">Year 2 • Term 1</div>
-                        <h3 class="features-title">Advanced JavaScript</h3>
-                        <div class="course-card__code">MDIA 3126</div>
-                    </div>
-                    <div class="course-card__content">
-                        <p class="body-text text-sm mb-4">ES6+, APIs, frameworks like React or Vue, and building complex interactive applications.</p>
-                        <div class="course-card__difficulty">
-                            <span class="text-sm text-medium-brown">Difficulty:</span>
-                            <div class="difficulty-bar">
-                                <div class="difficulty-fill" style="width: 85%"></div>
+                <article class="bg-ghost-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-categories="year2 development">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="inline-block py-1 px-3 bg-sapphire-blue/20 text-sapphire-blue text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                                Year 2 • Term 1
                             </div>
-                            <span class="text-sm text-medium-brown">Very Hard</span>
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Advanced JavaScript
+                            </h3>
+                            <div class="text-light-gray text-sm font-futura-medium uppercase tracking-futura-med">MDIA 3126</div>
                         </div>
-                        <div class="course-card__tips">
-                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
-                            <ul class="text-sm text-medium-brown space-y-1">
+                        
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            ES6+, APIs, frameworks like React or Vue, and building complex interactive applications.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between text-sm text-light-gray mb-2">
+                                <span class="font-futura-medium uppercase tracking-futura-med">Difficulty:</span>
+                                <span class="font-futura-medium uppercase tracking-futura-med">Very Hard</span>
+                            </div>
+                            <div class="h-2 bg-light-gray/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-green rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-light-gray/20 pt-4">
+                            <h4 class="text-sm font-futura-medium uppercase tracking-futura-med text-eerie-black mb-3">Student Tips:</h4>
+                            <ul class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black space-y-2">
                                 <li>• Review JS fundamentals before term starts</li>
                                 <li>• Build personal projects to practice concepts</li>
                                 <li>• Form study groups - you'll need them</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 6 -->
-                <div class="course-card" data-categories="year2 development">
-                    <div class="course-card__header">
-                        <div class="course-card__level">Year 2 • Term 2</div>
-                        <h3 class="features-title">Backend Development</h3>
-                        <div class="course-card__code">MDIA 3280</div>
-                    </div>
-                    <div class="course-card__content">
-                        <p class="body-text text-sm mb-4">Node.js, databases, APIs, and server-side development. Your introduction to full-stack thinking.</p>
-                        <div class="course-card__difficulty">
-                            <span class="text-sm text-medium-brown">Difficulty:</span>
-                            <div class="difficulty-bar">
-                                <div class="difficulty-fill" style="width: 80%"></div>
+                <article class="bg-ghost-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-categories="year2 development">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="inline-block py-1 px-3 bg-sapphire-blue/20 text-sapphire-blue text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                                Year 2 • Term 2
                             </div>
-                            <span class="text-sm text-medium-brown">Hard</span>
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Backend Development
+                            </h3>
+                            <div class="text-light-gray text-sm font-futura-medium uppercase tracking-futura-med">MDIA 3280</div>
                         </div>
-                        <div class="course-card__tips">
-                            <h4 class="text-sm font-semibold text-dark-brown mb-2">Student Tips:</h4>
-                            <ul class="text-sm text-medium-brown space-y-1">
+                        
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Node.js, databases, APIs, and server-side development. Your introduction to full-stack thinking.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between text-sm text-light-gray mb-2">
+                                <span class="font-futura-medium uppercase tracking-futura-med">Difficulty:</span>
+                                <span class="font-futura-medium uppercase tracking-futura-med">Hard</span>
+                            </div>
+                            <div class="h-2 bg-light-gray/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-green rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-light-gray/20 pt-4">
+                            <h4 class="text-sm font-futura-medium uppercase tracking-futura-med text-eerie-black mb-3">Student Tips:</h4>
+                            <ul class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black space-y-2">
                                 <li>• Understand the request-response cycle first</li>
                                 <li>• Practice SQL queries outside of class</li>
                                 <li>• Use Postman to test your APIs</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
 
             </div>
         </div>
     </section>
 
     <!-- Study Resources -->
-    <section class="py-16 md:py-20 bg-cream">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-heading mb-4">Study Resources</h2>
-                <p class="body-text max-w-2xl mx-auto">Student-created resources to help you succeed in each course.</p>
+                <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-light-gray mb-4 section-title-underline">
+                    STUDY RESOURCES
+                </h2>
+                <p class="font-dm-sans font-light text-body leading-body text-eerie-black max-w-2xl mx-auto">
+                    Student-created resources to help you succeed in each course.
+                </p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg text-center">
-                    <div class="w-12 h-12 bg-slate-blue rounded-lg mx-auto mb-4"></div>
-                    <h3 class="features-title mb-2">Study Guides</h3>
-                    <p class="body-text text-sm mb-4">Comprehensive notes and summaries for each course.</p>
-                    <a href="#" class="text-slate-blue text-sm font-semibold">View Guides →</a>
+                <div class="bg-white p-6 rounded-xl text-center shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-12 h-12 bg-sapphire-blue rounded-lg mx-auto mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Study Guides
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                        Comprehensive notes and summaries for each course.
+                    </p>
+                    <a href="#" class="text-sapphire-blue text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-sapphire-blue/80">View Guides →</a>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg text-center">
-                    <div class="w-12 h-12 bg-medium-brown rounded-lg mx-auto mb-4"></div>
-                    <h3 class="features-title mb-2">Code Examples</h3>
-                    <p class="body-text text-sm mb-4">Working code samples from successful student projects.</p>
-                    <a href="#" class="text-slate-blue text-sm font-semibold">Browse Code →</a>
+                <div class="bg-white p-6 rounded-xl text-center shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-12 h-12 bg-light-gray rounded-lg mx-auto mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Code Examples
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                        Working code samples from successful student projects.
+                    </p>
+                    <a href="#" class="text-sapphire-blue text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-sapphire-blue/80">Browse Code →</a>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg text-center">
-                    <div class="w-12 h-12 bg-slate-blue rounded-lg mx-auto mb-4"></div>
-                    <h3 class="features-title mb-2">Assignment Tips</h3>
-                    <p class="body-text text-sm mb-4">Strategies and approaches for major assignments.</p>
-                    <a href="#" class="text-slate-blue text-sm font-semibold">Get Tips →</a>
+                <div class="bg-white p-6 rounded-xl text-center shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-12 h-12 bg-sapphire-blue rounded-lg mx-auto mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Assignment Tips
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                        Strategies and approaches for major assignments.
+                    </p>
+                    <a href="#" class="text-sapphire-blue text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-sapphire-blue/80">Get Tips →</a>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-main">
-                    <h3 class="footer-logo">THE CREATIVE DEV</h3>
-                    <p class="footer-description">
-                        A student-led initiative supporting BCIT New Media students with peer-created resources, tutorials, and community connections. By students, for students.
+    <!-- Footer -->
+    <footer class="bg-eerie-black text-ghost-white py-[clamp(2.5rem,5vw,3.5rem)]">
+        <div class="max-w-container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Footer Column 1 -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="logos/logo.png" alt="PathwayHub Logo" class="h-12 w-auto">
+                        <h3 class="font-futura-extrabold text-[1.3rem] text-sapphire-blue uppercase tracking-futura-extra leading-none m-0">
+                            PathwayHub
+                        </h3>
+                    </div>
+                    <p class="font-dm-sans font-light text-[0.9rem] leading-body opacity-80">
+                        A student-driven platform supporting BCIT New Media students with resources, connections, and opportunities.
                     </p>
                 </div>
                 
-                <div class="footer-column">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About</a></li>
-                        <li><a href="program-hub.html" class="footer-link">Program Hub</a></li>
-                        <li><a href="resources.html" class="footer-link">Student Resources</a></li>
-                        <li><a href="community.html" class="footer-link">Community</a></li>
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        <li><a href="about.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">About Us</a></li>
+                        <li><a href="program-hub.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Program Hub</a></li>
+                        <li><a href="courses.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Courses</a></li>
+                        <li><a href="resources.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Resources</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h4 class="footer-heading">Connect</h4>
-                    <ul class="footer-links">
-                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Join the Team</a></li>
-                        <li><a href="contact.html" class="footer-link">Contribute Content</a></li>
-                        <li><a href="community.html" class="footer-link">Student Forum</a></li>
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Community</h4>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        <li><a href="blog.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Student Stories</a></li>
+                        <li><a href="community.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Community Hub</a></li>
+                        <li><a href="contact.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Get Involved</a></li>
                     </ul>
+                </div>
+                
+                <!-- Footer Column 4 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Connect</h4>
+                    <p class="font-dm-sans font-light text-[0.9rem] leading-body opacity-80 mb-3">
+                        Join our community and stay updated.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2025 The Creative Dev. Created by BCIT New Media students.
+            <div class="pt-6 border-t border-light-gray/20 text-center">
+                <p class="font-dm-sans font-light text-[0.85rem] opacity-70 m-0">
+                    &copy; 2024 PathwayHub. Created by BCIT New Media students.
                 </p>
             </div>
         </div>
