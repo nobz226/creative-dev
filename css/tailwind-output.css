@@ -819,6 +819,14 @@ video {
   height: clamp(3.5rem,5vw,4rem);
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
 .min-h-\[4\.5rem\] {
   min-height: 4.5rem;
 }
@@ -841,6 +849,10 @@ video {
 
 .w-auto {
   width: auto;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .min-w-\[4rem\] {
@@ -1108,6 +1120,11 @@ video {
 
 .bg-sapphire-blue\/20 {
   background-color: rgb(18 85 171 / 0.2);
+}
+
+.bg-light-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(166 166 168 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-br {
@@ -1479,6 +1496,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-standard {
   transition-duration: 300ms;
 }
@@ -1518,6 +1541,10 @@ video {
   background-color: rgb(18 85 171 / 0.9);
 }
 
+.hover\:bg-ghost-white\/90:hover {
+  background-color: rgb(232 233 243 / 0.9);
+}
+
 .hover\:text-sapphire-blue:hover {
   --tw-text-opacity: 1;
   color: rgb(18 85 171 / var(--tw-text-opacity, 1));
@@ -1526,6 +1553,10 @@ video {
 .hover\:text-ghost-white:hover {
   --tw-text-opacity: 1;
   color: rgb(232 233 243 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-sapphire-blue\/80:hover {
+  color: rgb(18 85 171 / 0.8);
 }
 
 .hover\:opacity-100:hover {
