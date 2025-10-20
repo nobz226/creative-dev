@@ -827,6 +827,10 @@ video {
   height: 16rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .min-h-\[4\.5rem\] {
   min-height: 4.5rem;
 }
@@ -853,6 +857,10 @@ video {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .min-w-\[4rem\] {
@@ -897,6 +905,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .resize {
@@ -1085,6 +1097,10 @@ video {
   border-color: transparent;
 }
 
+.border-light-gray\/30 {
+  border-color: rgb(166 166 168 / 0.3);
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1125,6 +1141,10 @@ video {
 .bg-light-gray {
   --tw-bg-opacity: 1;
   background-color: rgb(166 166 168 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 .bg-gradient-to-br {
@@ -1456,6 +1476,10 @@ video {
   opacity: 0.95;
 }
 
+.opacity-90 {
+  opacity: 0.9;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1488,6 +1512,11 @@ video {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition-all {
@@ -1545,6 +1574,10 @@ video {
   background-color: rgb(232 233 243 / 0.9);
 }
 
+.hover\:bg-white\/15:hover {
+  background-color: rgb(255 255 255 / 0.15);
+}
+
 .hover\:text-sapphire-blue:hover {
   --tw-text-opacity: 1;
   color: rgb(18 85 171 / var(--tw-text-opacity, 1));
@@ -1557,6 +1590,10 @@ video {
 
 .hover\:text-sapphire-blue\/80:hover {
   color: rgb(18 85 171 / 0.8);
+}
+
+.hover\:text-yellow-green\/80:hover {
+  color: rgb(162 213 67 / 0.8);
 }
 
 .hover\:opacity-100:hover {
@@ -1578,6 +1615,11 @@ video {
 .focus\:border-yellow-green:focus {
   --tw-border-opacity: 1;
   border-color: rgb(162 213 67 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-sapphire-blue:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(18 85 171 / var(--tw-border-opacity, 1));
 }
 
 .focus\:outline-none:focus {

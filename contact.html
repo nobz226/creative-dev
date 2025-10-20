@@ -3,123 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Join - The Creative Dev</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact & Join - PathwayHub</title>
+    <meta name="description" content="Get in touch with PathwayHub - contribute content, join our team, or connect with fellow BCIT New Media students">
+    <link rel="stylesheet" href="css/tailwind-output.css">
 </head>
-<body>
-     <!-- Navigation -->
-    <nav class="nav-container">
-        <div class="nav-wrapper">
-            <div class="nav-content">
-                <!-- Logo -->
-                <div class="logo-container">
-                    <div class="logo-text">
-                        <img src="logos/logo-darkbrown.svg" alt="Logo" class="logo-svg">
-                        <a href="index.html" style="text-decoration: none; color: inherit;"></a>
+<body class="font-dm-sans font-light bg-ghost-white text-eerie-black m-0 p-0 leading-body scroll-smooth">
+
+    <!-- Navigation -->
+    <nav class="bg-ghost-white shadow-nav sticky top-0 z-50">
+        <div class="max-w-container mx-auto px-4">
+            <div class="flex justify-between items-center h-[4.5rem] min-h-[4.5rem] gap-4">
+                <!-- Logo container -->
+                <a href="index.html" class="flex items-center flex-shrink-0 flex-none gap-2">
+                    <img src="logos/logo-darkbrown.svg" alt="PathwayHub Logo" class="h-[clamp(3.5rem,5vw,4rem)] w-auto flex-shrink-0">
+                    <div class="flex flex-col justify-center gap-0.5">
+                        <h1 class="font-futura-extrabold text-[clamp(1rem,2vw,1.4rem)] text-sapphire-blue uppercase tracking-futura-extra leading-none m-0">
+                            PathwayHub
+                        </h1>
+                        <h3 class="font-futura-medium text-[clamp(0.6rem,1.2vw,0.75rem)] text-yellow-green uppercase tracking-futura-med leading-none m-0">
+                            BCIT Media and Web Development
+                        </h3>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex flex-1 justify-end max-w-[800px]">
+                    <div class="flex items-center justify-end gap-[clamp(0.5rem,1.5vw,1rem)] flex-wrap">
+                        <a href="about.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">About</a>
+                        <a href="program-hub.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Program-Hub</a>
+                        <a href="courses.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Courses</a>
+                        <a href="resources.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Resources</a>
+                        <a href="community.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Community</a>
+                        <a href="blog.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Blog/News</a>
+                        <a href="contact.html" class="font-futura-medium text-[clamp(0.75rem,1.3vw,0.85rem)] uppercase tracking-futura-med text-eerie-black no-underline py-2 px-[clamp(0.5rem,1vw,0.75rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap">Contact</a>
                     </div>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <div class="desktop-nav">
-                    <div class="nav-links">
-                        <a href="index.html" class="nav-link">Home</a>
-                        <a href="about.html" class="nav-link">About</a>
-                        <a href="program-hub.html" class="nav-link">Program Hub</a>
-                        <a href="courses.html" class="nav-link">Courses</a>
-                        <a href="community.html" class="nav-link">Community</a>
-                        <a href="resources.html" class="nav-link">Student Resources</a>
-                        <a href="blog.html" class="nav-link">Blog/News</a>
-                    </div>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="mobile-menu-button">
-                    <button id="mobile-menu-btn" class="menu-btn">
-                        <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex-shrink-0">
+                    <button id="mobile-menu-btn" class="text-eerie-black bg-transparent border-0 cursor-pointer p-2 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="mobile-nav hidden">
-            <div class="mobile-nav-links">
-                <a href="index.html" class="mobile-nav-link">Home</a>
-                <a href="about.html" class="mobile-nav-link">About</a>
-                <a href="program-hub.html" class="mobile-nav-link">Program Hub</a>
-                <a href="courses.html" class="mobile-nav-link">Courses</a>
-                <a href="community.html" class="mobile-nav-link">Community</a>
-                <a href="resources.html" class="mobile-nav-link">Student Resources</a>
-                <a href="blog.html" class="mobile-nav-link">Blog/News</a>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-ghost-white border-t border-light-gray shadow-md">
+            <div class="p-4 flex flex-col gap-1">
+                <a href="about.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">About</a>
+                <a href="program-hub.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Program-Hub</a>
+                <a href="courses.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Courses</a>
+                <a href="resources.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Resources</a>
+                <a href="community.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Community</a>
+                <a href="blog.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Blog/News</a>
+                <a href="contact.html" class="font-futura-medium text-[0.85rem] uppercase tracking-futura-med text-eerie-black no-underline block py-2.5 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-gradient-to-br from-slate-blue via-medium-brown to-dark-brown text-white py-16 md:py-24">
-        <div class="section-container">
+    <section class="bg-light-gray text-ghost-white py-[clamp(4rem,8vw,6rem)] md:py-[clamp(6rem,10vw,8rem)]">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center max-w-4xl mx-auto">
-                <h1 class="hero-title mb-6">Get Involved</h1>
-                <p class="hero-subtitle text-cream">Have questions? Want to contribute? Ready to join our community of BCIT New Media students supporting each other?</p>
+                <h1 class="font-futura-extrabold text-hero-title uppercase tracking-futura-extra leading-title mb-6">
+                    GET INVOLVED
+                </h1>
+                <p class="font-dm-sans font-light text-hero-subtitle leading-normal text-ghost-white">
+                    Have questions? Want to contribute? Ready to join our community of BCIT New Media students supporting each other?
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Contact Options -->
-    <section class="py-16 md:py-20">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="grid lg:grid-cols-3 gap-8 mb-16">
-                <div class="contact-option">
-                    <div class="contact-option__icon bg-slate-blue"></div>
-                    <h3 class="features-title mb-3">General Questions</h3>
-                    <p class="body-text text-sm mb-4">Questions about the program, resources, or how to get involved with The Creative Dev community.</p>
-                    <a href="mailto:hello@thecreativedev.ca" class="contact-option__link">hello@thecreativedev.ca</a>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-sapphire-blue rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        General Questions
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                        Questions about the program, resources, or how to get involved with the PathwayHub community.
+                    </p>
+                    <a href="mailto:hello@pathwayhub.ca" class="text-sapphire-blue text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-sapphire-blue/80">hello@pathwayhub.ca</a>
                 </div>
                 
-                <div class="contact-option">
-                    <div class="contact-option__icon bg-medium-brown"></div>
-                    <h3 class="features-title mb-3">Content Contributions</h3>
-                    <p class="body-text text-sm mb-4">Want to write a blog post, share your story, or contribute resources for fellow students?</p>
-                    <a href="mailto:contribute@thecreativedev.ca" class="contact-option__link">contribute@thecreativedev.ca</a>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-yellow-green rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Content Contributions
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                        Want to write a blog post, share your story, or contribute resources for fellow students?
+                    </p>
+                    <a href="mailto:contribute@pathwayhub.ca" class="text-sapphire-blue text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-sapphire-blue/80">contribute@pathwayhub.ca</a>
                 </div>
                 
-                <div class="contact-option">
-                    <div class="contact-option__icon bg-slate-blue"></div>
-                    <h3 class="features-title mb-3">Join the Team</h3>
-                    <p class="body-text text-sm mb-4">Interested in becoming a core team member and helping build The Creative Dev platform?</p>
-                    <a href="mailto:join@thecreativedev.ca" class="contact-option__link">join@thecreativedev.ca</a>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-sapphire-blue rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Join the Team
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                        Interested in becoming a core team member and helping build the PathwayHub platform?
+                    </p>
+                    <a href="mailto:join@pathwayhub.ca" class="text-sapphire-blue text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-sapphire-blue/80">join@pathwayhub.ca</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Form -->
-    <section class="py-16 md:py-20 bg-cream">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="section-heading mb-4">Send Us a Message</h2>
-                    <p class="body-text max-w-2xl mx-auto">Use the form below to get in touch. We typically respond within 24 hours during the school year.</p>
+                    <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-light-gray mb-4 section-title-underline">
+                        SEND US A MESSAGE
+                    </h2>
+                    <p class="font-dm-sans font-light text-body leading-body text-eerie-black max-w-2xl mx-auto">
+                        Use the form below to get in touch. We typically respond within 24 hours during the school year.
+                    </p>
                 </div>
                 
-                <form class="contact-form">
+                <form class="bg-ghost-white p-8 rounded-xl shadow-card">
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
+                        <div>
+                            <label for="name" class="block font-futura-medium text-sm uppercase tracking-futura-med text-eerie-black mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full py-3 px-4 font-dm-sans text-body border-2 border-light-gray/30 rounded-lg focus:outline-none focus:border-sapphire-blue text-eerie-black bg-white transition-colors duration-standard" required>
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
+                        <div>
+                            <label for="email" class="block font-futura-medium text-sm uppercase tracking-futura-med text-eerie-black mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full py-3 px-4 font-dm-sans text-body border-2 border-light-gray/30 rounded-lg focus:outline-none focus:border-sapphire-blue text-eerie-black bg-white transition-colors duration-standard" required>
                         </div>
                     </div>
                     
-                    <div class="form-group mb-6">
-                        <label for="subject" class="form-label">Subject</label>
-                        <select id="subject" name="subject" class="form-input" required>
+                    <div class="mb-6">
+                        <label for="subject" class="block font-futura-medium text-sm uppercase tracking-futura-med text-eerie-black mb-2">Subject</label>
+                        <select id="subject" name="subject" class="w-full py-3 px-4 font-dm-sans text-body border-2 border-light-gray/30 rounded-lg focus:outline-none focus:border-sapphire-blue text-eerie-black bg-white transition-colors duration-standard" required>
                             <option value="">Select a topic...</option>
                             <option value="general">General Question</option>
                             <option value="contribute">Content Contribution</option>
@@ -130,13 +156,15 @@
                         </select>
                     </div>
                     
-                    <div class="form-group mb-8">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" rows="6" class="form-input" placeholder="Tell us more about your question or how you'd like to get involved..." required></textarea>
+                    <div class="mb-8">
+                        <label for="message" class="block font-futura-medium text-sm uppercase tracking-futura-med text-eerie-black mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" class="w-full py-3 px-4 font-dm-sans text-body border-2 border-light-gray/30 rounded-lg focus:outline-none focus:border-sapphire-blue text-eerie-black bg-white transition-colors duration-standard resize-none" placeholder="Tell us more about your question or how you'd like to get involved..." required></textarea>
                     </div>
                     
                     <div class="text-center">
-                        <button type="submit" class="cta-button">Send Message</button>
+                        <button type="submit" class="inline-block text-center no-underline bg-sapphire-blue text-ghost-white py-[clamp(1rem,2vw,1.2rem)] px-[clamp(2rem,4vw,2.5rem)] font-futura-medium font-semibold text-[clamp(1rem,2vw,1.1rem)] uppercase tracking-futura-med border-0 cursor-pointer rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.2)] transition-all duration-standard hover:bg-light-gray hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)]" style="transform: translateY(0)">
+                            Send Message
+                        </button>
                     </div>
                 </form>
             </div>
@@ -144,77 +172,107 @@
     </section>
 
     <!-- Ways to Contribute -->
-    <section class="py-16 md:py-20">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-heading mb-4">Ways to Contribute</h2>
-                <p class="body-text max-w-2xl mx-auto">There are many ways to support fellow New Media students, regardless of your experience level or available time.</p>
+                <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-light-gray mb-4 section-title-underline">
+                    WAYS TO CONTRIBUTE
+                </h2>
+                <p class="font-dm-sans font-light text-body leading-body text-eerie-black max-w-2xl mx-auto">
+                    There are many ways to support fellow New Media students, regardless of your experience level or available time.
+                </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="contribution-card">
-                    <div class="contribution-card__icon bg-slate-blue"></div>
-                    <h3 class="features-title mb-3">Share Your Experience</h3>
-                    <p class="body-text text-sm">Write about your program journey, challenges, and successes to help future students.</p>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-sapphire-blue rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Share Your Experience
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black">
+                        Write about your program journey, challenges, and successes to help future students.
+                    </p>
                 </div>
                 
-                <div class="contribution-card">
-                    <div class="contribution-card__icon bg-medium-brown"></div>
-                    <h3 class="features-title mb-3">Create Study Resources</h3>
-                    <p class="body-text text-sm">Develop study guides, cheat sheets, or tutorials for challenging courses.</p>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-yellow-green rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Create Study Resources
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black">
+                        Develop study guides, cheat sheets, or tutorials for challenging courses.
+                    </p>
                 </div>
                 
-                <div class="contribution-card">
-                    <div class="contribution-card__icon bg-slate-blue"></div>
-                    <h3 class="features-title mb-3">Offer Peer Tutoring</h3>
-                    <p class="body-text text-sm">Help struggling students with subjects you've mastered.</p>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-sapphire-blue rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Offer Peer Tutoring
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black">
+                        Help struggling students with subjects you've mastered.
+                    </p>
                 </div>
                 
-                <div class="contribution-card">
-                    <div class="contribution-card__icon bg-medium-brown"></div>
-                    <h3 class="features-title mb-3">Join the Core Team</h3>
-                    <p class="body-text text-sm">Help build and maintain The Creative Dev platform and community.</p>
+                <div class="bg-white p-6 rounded-xl shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="w-16 h-16 bg-yellow-green rounded-lg mb-4"></div>
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                        Join the Core Team
+                    </h3>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black">
+                        Help build and maintain the PathwayHub platform and community.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Contact -->
-    <section class="py-16 md:py-20 bg-slate-blue text-white">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-sapphire-blue text-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-heading text-white mb-4">Meet the Core Team</h2>
-                <p class="body-text text-cream max-w-2xl mx-auto">Get to know the students behind The Creative Dev and how to reach them directly.</p>
+                <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-ghost-white mb-4">
+                    MEET THE CORE TEAM
+                </h2>
+                <p class="font-dm-sans font-light text-body leading-body text-ghost-white max-w-2xl mx-auto opacity-95">
+                    Get to know the students behind PathwayHub and how to reach them directly.
+                </p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="team-contact-card">
-                    <img src="images/founder.jpg" alt="Sarah Chen" class="team-contact-card__avatar">
-                    <h3 class="features-title text-white mb-2">Sarah Chen</h3>
-                    <p class="text-cream text-sm mb-4">Founder & Content Lead</p>
-                    <div class="team-contact-card__links">
-                        <a href="mailto:sarah@thecreativedev.ca" class="team-contact-card__link">Email</a>
-                        <a href="#" class="team-contact-card__link">LinkedIn</a>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center transition-all duration-standard card-hover-lift hover:bg-white/15">
+                    <img src="images/founder.jpg" alt="Sarah Chen" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-ghost-white mb-2">
+                        Sarah Chen
+                    </h3>
+                    <p class="text-ghost-white text-sm mb-4 opacity-90">Founder & Content Lead</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="mailto:sarah@pathwayhub.ca" class="text-yellow-green text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-yellow-green/80">Email</a>
+                        <a href="#" class="text-yellow-green text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-yellow-green/80">LinkedIn</a>
                     </div>
                 </div>
                 
-                <div class="team-contact-card">
-                    <img src="images/res-manager.jpg" alt="Marcus Rodriguez" class="team-contact-card__avatar">
-                    <h3 class="features-title text-white mb-2 object-cover rounded-full">Marcus Rodriguez</h3>
-                    <p class="text-cream text-sm mb-4">Resource Coordinator</p>
-                    <div class="team-contact-card__links">
-                        <a href="mailto:marcus@thecreativedev.ca" class="team-contact-card__link">Email</a>
-                        <a href="#" class="team-contact-card__link">LinkedIn</a>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center transition-all duration-standard card-hover-lift hover:bg-white/15">
+                    <img src="images/res-manager.jpg" alt="Marcus Rodriguez" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-ghost-white mb-2">
+                        Marcus Rodriguez
+                    </h3>
+                    <p class="text-ghost-white text-sm mb-4 opacity-90">Resource Coordinator</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="mailto:marcus@pathwayhub.ca" class="text-yellow-green text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-yellow-green/80">Email</a>
+                        <a href="#" class="text-yellow-green text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-yellow-green/80">LinkedIn</a>
                     </div>
                 </div>
                 
-                <div class="team-contact-card">
-                    <img src="images/comm-manager.jpg" alt="Emma Thompson" class="team-contact-card__avatar">
-                    <h3 class="features-title text-white mb-2">Emma Thompson</h3>
-                    <p class="text-cream text-sm mb-4">Community Manager</p>
-                    <div class="team-contact-card__links">
-                        <a href="mailto:emma@thecreativedev.ca" class="team-contact-card__link">Email</a>
-                        <a href="#" class="team-contact-card__link">LinkedIn</a>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center transition-all duration-standard card-hover-lift hover:bg-white/15">
+                    <img src="images/comm-manager.jpg" alt="Emma Thompson" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-ghost-white mb-2">
+                        Emma Thompson
+                    </h3>
+                    <p class="text-ghost-white text-sm mb-4 opacity-90">Community Manager</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="mailto:emma@pathwayhub.ca" class="text-yellow-green text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-yellow-green/80">Email</a>
+                        <a href="#" class="text-yellow-green text-sm font-futura-medium uppercase tracking-futura-med transition-colors duration-standard hover:text-yellow-green/80">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -222,40 +280,66 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-main">
-                    <h3 class="footer-logo">THE CREATIVE DEV</h3>
-                    <p class="footer-description">
-                        A student-led initiative supporting BCIT New Media students with peer-created resources, tutorials, and community connections. By students, for students.
+    <footer class="bg-eerie-black text-ghost-white py-[clamp(2.5rem,5vw,3.5rem)]">
+        <div class="max-w-container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Footer Column 1 -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="logos/logo.png" alt="PathwayHub Logo" class="h-12 w-auto">
+                        <h3 class="font-futura-extrabold text-[1.3rem] text-sapphire-blue uppercase tracking-futura-extra leading-none m-0">
+                            PathwayHub
+                        </h3>
+                    </div>
+                    <p class="font-dm-sans font-light text-[0.9rem] leading-body opacity-80">
+                        A student-driven platform supporting BCIT New Media students with resources, connections, and opportunities.
                     </p>
                 </div>
                 
-                <div class="footer-column">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About</a></li>
-                        <li><a href="program-hub.html" class="footer-link">Program Hub</a></li>
-                        <li><a href="resources.html" class="footer-link">Student Resources</a></li>
-                        <li><a href="community.html" class="footer-link">Community</a></li>
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        <li><a href="about.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">About Us</a></li>
+                        <li><a href="resources.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Resources</a></li>
+                        <li><a href="community.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Community</a></li>
+                        <li><a href="contact.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h4 class="footer-heading">Connect</h4>
-                    <ul class="footer-links">
-                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Join the Team</a></li>
-                        <li><a href="contact.html" class="footer-link">Contribute Content</a></li>
-                        <li><a href="community.html" class="footer-link">Student Forum</a></li>
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Connect</h4>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        <li><a href="contact.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Contact Us</a></li>
+                        <li><a href="contact.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Join the Team</a></li>
+                        <li><a href="contact.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Contribute Content</a></li>
                     </ul>
+                </div>
+                
+                <!-- Footer Column 4 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Follow</h4>
+                    <p class="font-dm-sans font-light text-[0.9rem] leading-body opacity-80 mb-3">
+                        Join our community and stay updated.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2025 The Creative Dev. Created by BCIT New Media students.
+            <div class="pt-6 border-t border-light-gray/20 text-center">
+                <p class="font-dm-sans font-light text-[0.85rem] opacity-70 m-0">
+                    &copy; 2024 PathwayHub. Created by BCIT New Media students.
                 </p>
             </div>
         </div>
