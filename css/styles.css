@@ -28,13 +28,12 @@
 
 /* Custom properties for colors and fonts */
 :root {
-    --cream: #dacebf;
-    --dark-brown: #483328;
-    --slate-blue: #5b7594;
-    --medium-brown: #77614d;
-    --white: #ffffff;
-    --light-gray: #f8f9fa;
-    --border-color: #e5e7eb;
+    --ghost-white: #E8E9F3;
+    --eerie-black: #222222;
+    --sapphire-blue: #1255AB;
+    --yellow-green: #a2d543;
+    --light-gray: #a6a6a8;
+    
     
     /* Typography families */
     --futura-extrabold: 'Futura-ExtraBold', Impact, 'Arial Black', sans-serif;
@@ -52,9 +51,9 @@
 body {
     font-family: var(--dm-sans-light);
     font-weight: 300;
-    background-color: var(--cream);
+    background-color: var(--ghost-white);
     line-height: 1.6;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
 }
 
 /* Typography Classes */
@@ -96,7 +95,7 @@ body {
     font-size: clamp(2rem, 5vw, 2.5rem);
     font-family: var(--futura-extrabold);
     font-weight: 900;
-    color: var(--dark-brown);
+    color: var(--light-gray);
     text-align: center;
     margin-bottom: 3rem;
     text-transform: uppercase;
@@ -109,7 +108,7 @@ body {
     content: '';
     width: 60px;
     height: 4px;
-    background-color: var(--slate-blue);
+    background-color: var(--eerie-black);
     display: block;
     margin: 1rem auto 0;
     border-radius: 2px;
@@ -121,7 +120,7 @@ body {
     font-size: clamp(1.3rem, 3vw, 1.6rem);
     font-family: var(--futura-medium);
     font-weight: 600;
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     margin-bottom: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -130,7 +129,7 @@ body {
 /* PARAGRAPHS - Body Text uses DM Sans Light */
 .body-text,
 .feature-text {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     line-height: 1.7;
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-family: var(--dm-sans-light);
@@ -166,19 +165,19 @@ body {
 }
 
 .cta-button--white {
-    background-color: var(--white);
-    color: var(--slate-blue);
-    border-color: var(--white);
+    background-color: var(--ghost-white);
+    color: var(--sapphire-blue);
+    border-color: var(--ghost-white);
 }
 
 .cta-button--white:hover {
-    background-color: var(--cream);
-    color: var(--dark-brown);
+    background-color: var(--ghost-white);
+    color: var(--sapphire-blue);
 }
 
 /* Navigation */
 .nav-container {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
@@ -202,7 +201,7 @@ body {
 
 /* HEADING - Logo uses Futura Extrabold */
 .logo-text {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     font-family: var(--futura-extrabold);
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-weight: 900;
@@ -246,7 +245,7 @@ body {
 
 /* SUBHEADING - Nav links use Futura Medium */
 .nav-link {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     text-decoration: none;
     padding: 0.75rem clamp(0.8rem, 1.5vw, 1.2rem);
     font-size: clamp(0.8rem, 1.5vw, 0.9rem);
@@ -263,7 +262,7 @@ body {
 
 .nav-link:hover,
 .nav-link--active {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     background-color: rgba(91, 117, 148, 0.08);
 }
 
@@ -274,7 +273,7 @@ body {
 }
 
 .menu-btn {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     background: none;
     border: none;
     cursor: pointer;
@@ -284,7 +283,7 @@ body {
 }
 
 .menu-btn:hover {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     background-color: rgba(91, 117, 148, 0.08);
 }
 
@@ -294,8 +293,8 @@ body {
 }
 
 .mobile-nav {
-    background-color: var(--white);
-    border-top: 1px solid var(--border-color);
+    background-color: var(--ghost-white);
+    border-top: 1px solid var(--light-gray);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -308,7 +307,7 @@ body {
 
 /* SUBHEADING - Mobile nav links use Futura Medium */
 .mobile-nav-link {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     text-decoration: none;
     display: block;
     padding: 0.75rem 1rem;
@@ -322,14 +321,14 @@ body {
 }
 
 .mobile-nav-link:hover {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     background-color: rgba(91, 117, 148, 0.08);
 }
 
 /* Hero Section */
 .hero-section {
-    background-color: var(--slate-blue);
-    color: var(--white);
+    background-color: var(--yellow-green);
+    color: var(--ghost-white);
     padding: clamp(4rem, 8vw, 6rem) 0;
     text-align: center;
     position: relative;
@@ -380,8 +379,8 @@ body {
 
 /* SUBHEADING - Hero button uses Futura Medium */
 .hero-button {
-    background-color: var(--cream);
-    color: var(--dark-brown);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
     padding: clamp(1rem, 2vw, 1.2rem) clamp(2rem, 4vw, 2.5rem);
     font-family: var(--futura-medium);
     font-weight: 600;
@@ -397,7 +396,7 @@ body {
 }
 
 .hero-button:hover {
-    background-color: var(--dark-brown);
+    background-color: var(--light-gray);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
@@ -414,7 +413,7 @@ body {
 }
 
 .feature-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: clamp(1.5rem, 4vw, 2.5rem);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -431,7 +430,7 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: var(--slate-blue);
+    background-color: var(--sapphire-blue);
 }
 
 .feature-card:hover {
@@ -441,7 +440,7 @@ body {
 
 /* Quick Links Section */
 .quick-links-section {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: clamp(3rem, 6vw, 5rem) 0;
 }
 
@@ -456,7 +455,7 @@ body {
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
-    color: var(--white);
+    color: var(--ghost-white);
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
@@ -491,11 +490,11 @@ body {
 }
 
 .quick-link.purple {
-    background-color: #8b5cf6;
+    background-color: var(--sapphire-blue)
 }
 
 .quick-link.green {
-    background-color: #10b981;
+    background-color: var(--yellow-green);
 }
 
 .quick-link.pink {
@@ -503,11 +502,11 @@ body {
 }
 
 .quick-link.teal {
-    background-color: #06b6d4;
+    background-color: var(--light-gray);
 }
 
 .quick-link.blue {
-    background-color: #3b82f6;
+    background-color: var(--eerie-black);
 }
 
 .quick-link-icon {
@@ -548,7 +547,7 @@ body {
 }
 
 .story-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: clamp(1.5rem, 3vw, 2rem);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -571,7 +570,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: var(--ghost-white);
     font-family: var(--futura-extrabold);
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 900;
@@ -579,18 +578,18 @@ body {
 }
 
 .slate-blue-bg {
-    background-color: var(--slate-blue);
+    background-color: var(--sapphire-blue);
 }
 
 .medium-brown-bg {
-    background-color: var(--medium-brown);
+    background-color: var(--eerie-black);
 }
 
 /* SUBHEADING - Story titles use Futura Medium */
 .story-title {
     font-family: var(--futura-medium);
     font-weight: 600;
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -599,7 +598,7 @@ body {
 
 /* PARAGRAPH - Story text uses DM Sans Light */
 .story-text {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     font-size: clamp(0.85rem, 1.8vw, 0.95rem);
     line-height: 1.6;
     font-style: italic;
@@ -609,8 +608,8 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background-color: var(--dark-brown);
-    color: var(--cream);
+    background-color: var(--ghost-white);
+    color: var(--ghost-white);
     padding: clamp(3rem, 6vw, 5rem) 0;
     text-align: center;
     position: relative;
@@ -663,34 +662,32 @@ body {
 }
 
 .cta-button.primary {
-    background-color: var(--slate-blue);
-    color: var(--white);
-    border-color: var(--slate-blue);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
 }
 
 .cta-button.primary:hover {
-    background-color: rgba(91, 117, 148, 0.9);
+    background-color: var(--light-gray);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button.secondary {
-    background-color: transparent;
-    color: var(--cream);
-    border-color: var(--cream);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
 }
 
 .cta-button.secondary:hover {
-    color: var(--dark-brown);
+    background-color: var(--light-gray);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: clamp(3rem, 5vw, 4rem) 0 2rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--light-gray);
 }
 
 .footer-container {
@@ -713,7 +710,7 @@ body {
 .footer-logo {
     font-family: var(--futura-extrabold);
     font-weight: 900;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -722,7 +719,7 @@ body {
 
 /* PARAGRAPH - Footer description uses DM Sans Light */
 .footer-description {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     font-size: clamp(0.85rem, 1.8vw, 0.95rem);
     line-height: 1.7;
     margin-bottom: 1rem;
@@ -735,7 +732,7 @@ body {
 .footer-heading {
     font-family: var(--futura-medium);
     font-weight: 600;
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     margin-bottom: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -751,7 +748,7 @@ body {
 
 /* PARAGRAPH - Footer links use DM Sans Light */
 .footer-link {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     text-decoration: none;
     font-size: clamp(0.8rem, 1.6vw, 0.9rem);
     transition: color 0.3s ease;
@@ -761,12 +758,11 @@ body {
 }
 
 .footer-link:hover {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     opacity: 1;
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--border-color);
     margin-top: 2.5rem;
     padding-top: 2rem;
     text-align: center;
@@ -774,7 +770,7 @@ body {
 
 /* PARAGRAPH - Footer copyright uses DM Sans Light */
 .footer-copyright {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     font-size: clamp(0.75rem, 1.5vw, 0.85rem);
     opacity: 0.7;
     font-family: var(--dm-sans-light);
@@ -785,7 +781,7 @@ body {
 
 /* Course Cards (courses.html) */
 .course-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(91, 117, 148, 0.1);
@@ -799,7 +795,7 @@ body {
 }
 
 .course-card__header {
-    background: linear-gradient(135deg, var(--slate-blue), var(--medium-brown));
+    background: var(--ghost-white);
     color: var(--white);
     padding: 1.5rem;
 }
@@ -828,7 +824,7 @@ body {
 .difficulty-bar {
     width: 100%;
     height: 6px;
-    background-color: var(--cream);
+    background-color: var(--ghost-white);
     border-radius: 3px;
     overflow: hidden;
     margin: 0.5rem 0;
@@ -844,7 +840,6 @@ body {
 .course-card__tips {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
 }
 
 /* Filter Buttons */
@@ -856,9 +851,9 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    border: 2px solid var(--slate-blue);
-    background-color: var(--white);
-    color: var(--slate-blue);
+    border: 2px solid var(--sapphire-blue);
+    background-color: var(--ghost-white);
+    color: var(--sapphire-blue);
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -868,8 +863,8 @@ body {
 .blog-filter:hover,
 .filter-button--active,
 .blog-filter--active {
-    background-color: var(--slate-blue);
-    color: var(--white);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
 }
 
 /* Story Cards (community.html) */
@@ -883,7 +878,7 @@ body {
 .story-card__avatar {
     width: 3rem;
     height: 3rem;
-    background-color: var(--slate-blue);
+    background-color: var(--sapphire-blue);
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -893,7 +888,7 @@ body {
 }
 
 .story-card__link {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     text-decoration: none;
     font-family: var(--futura-medium);
     font-size: 0.85rem;
@@ -904,12 +899,12 @@ body {
 }
 
 .story-card__link:hover {
-    color: var(--medium-brown);
+    color: var(--eerie-black);
 }
 
 /* Alumni Cards */
 .alumni-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -918,7 +913,7 @@ body {
 .alumni-card__photo {
     width: 5rem;
     height: 5rem;
-    background-color: var(--slate-blue);
+    background-color: var(--sapphire-blue);
     border-radius: 50%;
     margin-bottom: 1.5rem;
 }
@@ -926,28 +921,26 @@ body {
 .alumni-card__path {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
 }
 
 /* Company Cards */
 .company-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
-    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 .company-card:hover {
-    border-color: var(--slate-blue);
+    border-color: var(--sapphire-blue);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .company-card__logo {
     width: 3rem;
     height: 3rem;
-    background-color: var(--cream);
+    background-color: var(--ghost-white);
     border-radius: 6px;
     margin: 0 auto 0.5rem auto;
 }
@@ -958,12 +951,12 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
 }
 
 /* Connect Cards */
 .connect-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -984,7 +977,7 @@ body {
 }
 
 .connect-card__link {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     text-decoration: none;
     font-family: var(--futura-medium);
     font-size: 0.9rem;
@@ -995,15 +988,15 @@ body {
 }
 
 .connect-card__link:hover {
-    color: var(--medium-brown);
+    color: var(--eerie-black);
 }
 
 /* Resource Items (resources.html) */
 .resource-item {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid var(--slate-blue);
+    border-left: 4px solid var(--sapphire-blue);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -1011,7 +1004,7 @@ body {
     font-family: var(--futura-medium);
     font-size: 1rem;
     font-weight: 600;
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -1020,14 +1013,14 @@ body {
 .resource-item__description {
     font-family: var(--dm-sans-light);
     font-size: 0.9rem;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     margin-bottom: 0.75rem;
 }
 
 .resource-item__details {
     font-family: var(--dm-sans-light);
     font-size: 0.8rem;
-    color: var(--medium-brown);
+    color: var(--eerie-black);
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -1035,12 +1028,12 @@ body {
 
 /* Quick Access Cards */
 .quick-access-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
     text-decoration: none;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -1048,7 +1041,7 @@ body {
 .quick-access-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    color: var(--dark-brown);
+    color: var(--eerie-black);
 }
 
 .quick-access-card__icon {
@@ -1070,7 +1063,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -1078,7 +1071,7 @@ body {
 .software-item__icon {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--slate-blue);
+    background-color: var(--sapphire-blue);
     border-radius: 6px;
     flex-shrink: 0;
 }
@@ -1087,19 +1080,19 @@ body {
     font-family: var(--futura-medium);
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     margin-bottom: 0.25rem;
 }
 
 .software-item__note {
     font-family: var(--dm-sans-light);
     font-size: 0.8rem;
-    color: var(--medium-brown);
+    color: var(--eerie-black);
 }
 
 /* Study Resource Cards */
 .study-resource-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1119,7 +1112,7 @@ body {
 }
 
 .study-resource-card__download {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     text-decoration: none;
     font-family: var(--futura-medium);
     font-size: 0.8rem;
@@ -1130,7 +1123,7 @@ body {
 }
 
 .study-resource-card__download:hover {
-    color: var(--medium-brown);
+    color: var(--eerie-black);
 }
 
 /* Tutoring Components */
@@ -1139,7 +1132,7 @@ body {
 }
 
 .tutoring-subject {
-    background-color: var(--cream);
+    background-color: var(--ghost-white);
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-family: var(--futura-medium);
@@ -1147,7 +1140,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     text-align: center;
 }
 
@@ -1160,8 +1153,8 @@ body {
 .tutoring-step__number {
     width: 2rem;
     height: 2rem;
-    background-color: var(--slate-blue);
-    color: var(--white);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1174,7 +1167,7 @@ body {
 
 /* Contact Forms */
 .contact-form {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
@@ -1189,7 +1182,7 @@ body {
     font-family: var(--futura-medium);
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -1198,23 +1191,22 @@ body {
 .form-input {
     width: 100%;
     padding: 1rem;
-    border: 2px solid var(--border-color);
     border-radius: 8px;
     font-family: var(--dm-sans-light);
     font-size: 1rem;
-    color: var(--dark-brown);
-    background-color: var(--white);
+    color: var(--eerie-black);
+    background-color: var(--ghost-white);
     transition: border-color 0.3s ease;
 }
 
 .form-input:focus {
     outline: none;
-    border-color: var(--slate-blue);
+    border-color: var(--sapphire-blue);
 }
 
 /* Contact Options */
 .contact-option {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1235,7 +1227,7 @@ body {
 }
 
 .contact-option__link {
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     text-decoration: none;
     font-family: var(--futura-medium);
     font-size: 1rem;
@@ -1255,7 +1247,7 @@ body {
 
 /* Contribution Cards */
 .contribution-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1296,7 +1288,7 @@ body {
 }
 
 .team-contact-card__link {
-    color: var(--dark-brown);
+    color: var(--eerie-black);
     text-decoration: none;
     font-family: var(--futura-medium);
     font-size: 0.8rem;
@@ -1316,7 +1308,7 @@ body {
 
 /* Blog Components */
 .featured-post {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
@@ -1324,7 +1316,7 @@ body {
 
 .featured-post__image {
     min-height: 300px;
-    background: linear-gradient(135deg, var(--slate-blue), var(--medium-brown));
+    background: linear-gradient(135deg, var(--sapphire-blue), var(--yellow-green));
 }
 
 .featured-post__category {
@@ -1333,7 +1325,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     margin-bottom: 0.5rem;
 }
 
@@ -1350,7 +1342,7 @@ body {
 
 /* Blog Cards */
 .blog-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1364,7 +1356,7 @@ body {
 
 .blog-card__image {
     height: 200px;
-    background: linear-gradient(135deg, var(--slate-blue), var(--medium-brown));
+    background: linear-gradient(135deg, var(--sapphire-blue), var(--yellow-green));
 }
 
 .blog-card__content {
@@ -1377,7 +1369,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    color: var(--slate-blue);
+    color: var(--sapphire-blue);
     margin-bottom: 0.75rem;
 }
 
@@ -1401,11 +1393,11 @@ body {
     border: none;
     font-family: var(--dm-sans-light);
     font-size: 1rem;
-    color: var(--dark-brown);
+    color: var(--eerie-black);
 }
 
 .newsletter-form__input::placeholder {
-    color: var(--medium-brown);
+    color: var(--light-gray);
     opacity: 0.7;
 }
 
@@ -1415,8 +1407,8 @@ body {
 
 .newsletter-form__button {
     padding: 1rem 1.5rem;
-    background-color: var(--medium-brown);
-    color: var(--white);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
     border: none;
     font-family: var(--futura-medium);
     font-size: 0.9rem;
@@ -1428,12 +1420,12 @@ body {
 }
 
 .newsletter-form__button:hover {
-    background-color: var(--dark-brown);
+    background-color: var(--light-gray);
 }
 
 /* Event Cards */
 .event-card {
-    background-color: var(--white);
+    background-color: var(--ghost-white);
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1448,8 +1440,8 @@ body {
 }
 
 .event-card__date {
-    background-color: var(--slate-blue);
-    color: var(--white);
+    background-color: var(--sapphire-blue);
+    color: var(--ghost-white);
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
@@ -1480,7 +1472,6 @@ body {
 .event-card__details {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
 }
 
 /* Responsive Design */
