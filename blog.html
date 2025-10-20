@@ -3,103 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & News - The Creative Dev</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Blog & News - PathwayHub</title>
+    <meta name="description" content="Stay updated with student stories, program insights, industry trends, and practical advice for thriving in New Media at BCIT">
+    <link rel="stylesheet" href="css/tailwind-output.css">
 </head>
-<body>
-<!-- Navigation -->
-    <nav class="nav-container">
-        <div class="nav-wrapper">
-            <div class="nav-content">
-                <!-- Logo -->
-                <div class="logo-container">
-                    <div class="logo-text">
-                        <img src="logos/logo-darkbrown.svg" alt="Logo" class="logo-svg">
-                        <a href="index.html" style="text-decoration: none; color: inherit;"></a>
+<body class="font-dm-sans font-light bg-ghost-white text-eerie-black m-0 p-0 leading-body scroll-smooth">
+
+    <!-- Navigation -->
+    <nav class="bg-ghost-white shadow-nav sticky top-0 z-50">
+        <div class="max-w-container mx-auto px-4">
+            <div class="flex justify-between items-center h-[4.5rem] min-h-[4.5rem] gap-8">
+                <!-- Logo container -->
+                <div class="flex items-center flex-shrink-0 flex-none">
+                    <div class="flex items-center gap-2">
+                        <img src="logos/logo-darkbrown.svg" alt="PathwayHub Logo" class="h-[clamp(4rem,6vw,4.5rem)] w-auto flex-shrink-0">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h1 class="font-futura-extrabold text-header-main text-sapphire-blue uppercase tracking-futura-extra leading-none m-0">
+                            PathwayHub
+                        </h1>
+                        <h3 class="font-futura-medium text-header-sub text-yellow-green uppercase tracking-futura-med leading-none m-0">
+                            BCIT Media and Web Development
+                        </h3>
                     </div>
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="desktop-nav">
-                    <div class="nav-links">
-                        <a href="index.html" class="nav-link">Home</a>
-                        <a href="about.html" class="nav-link">About</a>
-                        <a href="program-hub.html" class="nav-link">Program Hub</a>
-                        <a href="courses.html" class="nav-link">Courses</a>
-                        <a href="community.html" class="nav-link">Community</a>
-                        <a href="resources.html" class="nav-link">Student Resources</a>
-                        <a href="contact.html" class="nav-link">Contact/Join</a>
+                <div class="hidden md:flex flex-1 justify-center">
+                    <div class="flex items-center gap-[clamp(1.5rem,3vw,2.5rem)] flex-nowrap">
+                        <a href="about.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">About</a>
+                        <a href="resources.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">Resources</a>
+                        <a href="stories.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">Stories</a>
+                        <a href="events.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">Events</a>
+                        <a href="community.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">Community</a>
+                        <a href="opportunities.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">Opportunities</a>
+                        <a href="submit.html" class="font-futura-medium text-nav-link uppercase tracking-futura-med text-eerie-black no-underline py-3 px-[clamp(0.8rem,1.5vw,1.2rem)] rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8 whitespace-nowrap flex-shrink-0">Submit</a>
                     </div>
                 </div>
-
-                <!-- Mobile menu button -->
-                <div class="mobile-menu-button">
-                    <button id="mobile-menu-btn" class="menu-btn">
-                        <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex-shrink-0 flex-none">
+                    <button id="mobile-menu-btn" class="text-eerie-black bg-transparent border-0 cursor-pointer p-3 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="mobile-nav hidden">
-            <div class="mobile-nav-links">
-                <a href="index.html" class="mobile-nav-link">Home</a>
-                <a href="abou.html" class="mobile-nav-link">About</a>
-                <a href="program-hub.html" class="mobile-nav-link">Program Hub</a>
-                <a href="courses.html" class="mobile-nav-link">Courses</a>
-                <a href="community.html" class="mobile-nav-link">Community</a>
-                <a href="resources.html" class="mobile-nav-link">Student Resources</a>
-                <a href="contact.html" class="mobile-nav-link">Contact/Join</a>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-ghost-white border-t border-light-gray shadow-md">
+            <div class="p-4 flex flex-col gap-2">
+                <a href="about.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">About</a>
+                <a href="resources.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Resources</a>
+                <a href="stories.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Stories</a>
+                <a href="events.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Events</a>
+                <a href="community.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Community</a>
+                <a href="opportunities.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Opportunities</a>
+                <a href="submit.html" class="font-futura-medium text-[0.9rem] uppercase tracking-futura-med text-eerie-black no-underline block py-3 px-4 rounded-md transition-all duration-standard hover:text-sapphire-blue hover:bg-sapphire-blue/8">Submit</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-dark-brown text-white py-16 md:py-24">
-        <div class="section-container">
+    <section class="bg-yellow-green text-ghost-white py-[clamp(4rem,8vw,6rem)] md:py-[clamp(6rem,10vw,8rem)]">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center max-w-4xl mx-auto">
-                <h1 class="hero-title mb-6">Blog & News</h1>
-                <p class="hero-subtitle text-cream">Stay updated with student stories, program insights, industry trends, and practical advice for thriving in New Media at BCIT.</p>
+                <h1 class="font-futura-extrabold text-hero-title uppercase tracking-futura-extra leading-title mb-6">
+                    BLOG & NEWS
+                </h1>
+                <p class="font-dm-sans font-light text-hero-subtitle leading-normal text-ghost-white">
+                    Stay updated with student stories, program insights, industry trends, and practical advice for thriving in New Media at BCIT.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Categories Filter -->
-    <section class="py-8 bg-cream">
-        <div class="section-container">
+    <section class="py-8 bg-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="flex flex-wrap justify-center gap-4">
-                <button class="blog-filter blog-filter--active" data-category="all">All Posts</button>
-                <button class="blog-filter" data-category="student-stories">Student Stories</button>
-                <button class="blog-filter" data-category="tutorials">Tutorials</button>
-                <button class="blog-filter" data-category="industry-news">Industry News</button>
-                <button class="blog-filter" data-category="program-updates">Program Updates</button>
-                <button class="blog-filter" data-category="career-advice">Career Advice</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard bg-sapphire-blue text-ghost-white border-sapphire-blue hover:bg-sapphire-blue/90" data-category="all">All Posts</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-category="student-stories">Student Stories</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-category="tutorials">Tutorials</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-category="industry-news">Industry News</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-category="program-updates">Program Updates</button>
+                <button class="py-2 px-4 font-futura-medium text-[0.85rem] font-semibold uppercase tracking-futura-med border-2 cursor-pointer rounded-md transition-all duration-standard border-sapphire-blue bg-ghost-white text-sapphire-blue hover:bg-sapphire-blue hover:text-ghost-white" data-category="career-advice">Career Advice</button>
             </div>
         </div>
     </section>
 
     <!-- Featured Post -->
-    <section class="py-16 md:py-20">
-        <div class="section-container">
-            <div class="featured-post">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-white">
+        <div class="max-w-container mx-auto px-4">
+            <div class="bg-ghost-white rounded-xl overflow-hidden shadow-card">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div class="featured-post__image"></div>
-                    <div class="featured-post__content">
-                        <div class="featured-post__category">Student Stories</div>
-                        <h2 class="section-heading mb-4">How I Landed My Dream Job Before Graduation</h2>
-                        <p class="body-text mb-6">Follow Marcus Rodriguez's journey from struggling first-year student to landing a full-time position at a Vancouver tech company while still completing his final term.</p>
-                        <div class="featured-post__meta">
-                            <span class="text-medium-brown text-sm">By Marcus Rodriguez</span>
-                            <span class="text-medium-brown text-sm">•</span>
-                            <span class="text-medium-brown text-sm">October 5, 2024</span>
-                            <span class="text-medium-brown text-sm">•</span>
-                            <span class="text-medium-brown text-sm">8 min read</span>
+                    <div class="h-[20rem] lg:h-full bg-sapphire-blue/20"></div>
+                    <div class="p-8">
+                        <div class="inline-block py-1 px-3 bg-sapphire-blue text-ghost-white text-xs font-futura-medium uppercase tracking-futura-med rounded mb-4">
+                            Student Stories
                         </div>
-                        <a href="#" class="cta-button mt-6 inline-block">Read Full Story</a>
+                        <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-eerie-black mb-4">
+                            HOW I LANDED MY DREAM JOB BEFORE GRADUATION
+                        </h2>
+                        <p class="font-dm-sans font-light text-body leading-body text-eerie-black mb-6">
+                            Follow Marcus Rodriguez's journey from struggling first-year student to landing a full-time position at a Vancouver tech company while still completing his final term.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-2 text-light-gray text-sm mb-6">
+                            <span>By Marcus Rodriguez</span>
+                            <span>•</span>
+                            <span>October 5, 2024</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <a href="#" class="inline-block text-center no-underline bg-sapphire-blue text-ghost-white py-[clamp(1rem,2vw,1.2rem)] px-[clamp(2rem,4vw,2.5rem)] font-futura-medium font-semibold text-[clamp(1rem,2vw,1.1rem)] uppercase tracking-futura-med border-0 cursor-pointer rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.2)] transition-all duration-standard hover:bg-light-gray hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)]" style="transform: translateY(0)">
+                            Read Full Story
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,78 +127,114 @@
     </section>
 
     <!-- Blog Posts Grid -->
-    <section class="py-16 md:py-20 bg-cream">
-        <div class="section-container">
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-ghost-white">
+        <div class="max-w-container mx-auto px-4">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <article class="blog-card" data-category="tutorials">
-                    <div class="blog-card__image"></div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__category">Tutorial</div>
-                        <h3 class="features-title mb-3">Building Your First React Component</h3>
-                        <p class="body-text text-sm mb-4">A step-by-step guide to creating reusable components, perfect for students just starting with React in their second year.</p>
-                        <div class="blog-card__meta">
-                            <span class="text-xs text-medium-brown">Sarah Kim • Oct 3, 2024</span>
+                <article class="bg-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-category="tutorials">
+                    <div class="h-48 bg-sapphire-blue/20"></div>
+                    <div class="p-6">
+                        <div class="inline-block py-1 px-3 bg-yellow-green text-eerie-black text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                            Tutorial
+                        </div>
+                        <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                            Building Your First React Component
+                        </h3>
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            A step-by-step guide to creating reusable components, perfect for students just starting with React in their second year.
+                        </p>
+                        <div class="text-xs text-light-gray">
+                            Sarah Kim • Oct 3, 2024
                         </div>
                     </div>
                 </article>
 
-                <article class="blog-card" data-category="career-advice">
-                    <div class="blog-card__image"></div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__category">Career Advice</div>
-                        <h3 class="features-title mb-3">Portfolio Projects That Actually Get You Hired</h3>
-                        <p class="body-text text-sm mb-4">Alumni share the portfolio pieces that helped them land their first jobs and explain what makes projects stand out.</p>
-                        <div class="blog-card__meta">
-                            <span class="text-xs text-medium-brown">Jennifer Martinez • Oct 1, 2024</span>
+                <article class="bg-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-category="career-advice">
+                    <div class="h-48 bg-sapphire-blue/20"></div>
+                    <div class="p-6">
+                        <div class="inline-block py-1 px-3 bg-yellow-green text-eerie-black text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                            Career Advice
+                        </div>
+                        <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                            Portfolio Projects That Actually Get You Hired
+                        </h3>
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Alumni share the portfolio pieces that helped them land their first jobs and explain what makes projects stand out.
+                        </p>
+                        <div class="text-xs text-light-gray">
+                            Jennifer Martinez • Oct 1, 2024
                         </div>
                     </div>
                 </article>
 
-                <article class="blog-card" data-category="industry-news">
-                    <div class="blog-card__image"></div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__category">Industry News</div>
-                        <h3 class="features-title mb-3">Vancouver Tech Scene: What's Hot in 2024</h3>
-                        <p class="body-text text-sm mb-4">Local industry professionals discuss emerging trends and what skills are in demand for new graduates.</p>
-                        <div class="blog-card__meta">
-                            <span class="text-xs text-medium-brown">David Park • Sep 28, 2024</span>
+                <article class="bg-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-category="industry-news">
+                    <div class="h-48 bg-sapphire-blue/20"></div>
+                    <div class="p-6">
+                        <div class="inline-block py-1 px-3 bg-yellow-green text-eerie-black text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                            Industry News
+                        </div>
+                        <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                            Vancouver Tech Scene: What's Hot in 2024
+                        </h3>
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Local industry professionals discuss emerging trends and what skills are in demand for new graduates.
+                        </p>
+                        <div class="text-xs text-light-gray">
+                            David Park • Sep 28, 2024
                         </div>
                     </div>
                 </article>
 
-                <article class="blog-card" data-category="student-stories">
-                    <div class="blog-card__image"></div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__category">Student Stories</div>
-                        <h3 class="features-title mb-3">Surviving Your First Group Project</h3>
-                        <p class="body-text text-sm mb-4">Real strategies from students on how to navigate team dynamics, manage conflicts, and deliver successful projects.</p>
-                        <div class="blog-card__meta">
-                            <span class="text-xs text-medium-brown">Alex Thompson • Sep 25, 2024</span>
+                <article class="bg-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-category="student-stories">
+                    <div class="h-48 bg-sapphire-blue/20"></div>
+                    <div class="p-6">
+                        <div class="inline-block py-1 px-3 bg-yellow-green text-eerie-black text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                            Student Stories
+                        </div>
+                        <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                            Surviving Your First Group Project
+                        </h3>
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Real strategies from students on how to navigate team dynamics, manage conflicts, and deliver successful projects.
+                        </p>
+                        <div class="text-xs text-light-gray">
+                            Alex Thompson • Sep 25, 2024
                         </div>
                     </div>
                 </article>
 
-                <article class="blog-card" data-category="program-updates">
-                    <div class="blog-card__image"></div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__category">Program Updates</div>
-                        <h3 class="features-title mb-3">New Curriculum Changes for 2025</h3>
-                        <p class="body-text text-sm mb-4">Overview of upcoming program updates including new courses, technology focus areas, and industry partnerships.</p>
-                        <div class="blog-card__meta">
-                            <span class="text-xs text-medium-brown">Program Team • Sep 20, 2024</span>
+                <article class="bg-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-category="program-updates">
+                    <div class="h-48 bg-sapphire-blue/20"></div>
+                    <div class="p-6">
+                        <div class="inline-block py-1 px-3 bg-yellow-green text-eerie-black text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                            Program Updates
+                        </div>
+                        <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                            New Curriculum Changes for 2025
+                        </h3>
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Overview of upcoming program updates including new courses, technology focus areas, and industry partnerships.
+                        </p>
+                        <div class="text-xs text-light-gray">
+                            Program Team • Sep 20, 2024
                         </div>
                     </div>
                 </article>
 
-                <article class="blog-card" data-category="tutorials">
-                    <div class="blog-card__image"></div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__category">Tutorial</div>
-                        <h3 class="features-title mb-3">Git & GitHub for New Media Students</h3>
-                        <p class="body-text text-sm mb-4">Master version control with this comprehensive guide covering everything from basic commands to collaborative workflows.</p>
-                        <div class="blog-card__meta">
-                            <span class="text-xs text-medium-brown">Marcus Rodriguez • Sep 18, 2024</span>
+                <article class="bg-white rounded-xl overflow-hidden shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover" data-category="tutorials">
+                    <div class="h-48 bg-sapphire-blue/20"></div>
+                    <div class="p-6">
+                        <div class="inline-block py-1 px-3 bg-yellow-green text-eerie-black text-xs font-futura-medium uppercase tracking-futura-med rounded mb-3">
+                            Tutorial
+                        </div>
+                        <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-3">
+                            Git & GitHub for New Media Students
+                        </h3>
+                        <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-4">
+                            Master version control with this comprehensive guide covering everything from basic commands to collaborative workflows.
+                        </p>
+                        <div class="text-xs text-light-gray">
+                            Marcus Rodriguez • Sep 18, 2024
                         </div>
                     </div>
                 </article>
@@ -188,66 +244,92 @@
     </section>
 
     <!-- Newsletter Signup -->
-    <section class="py-16 md:py-20 bg-slate-blue text-white">
-        <div class="section-container text-center">
-            <h2 class="section-heading text-white mb-6">Stay Updated</h2>
-            <p class="body-text text-cream max-w-2xl mx-auto mb-8">Get weekly updates with new blog posts, upcoming events, and program announcements delivered to your inbox.</p>
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-sapphire-blue text-ghost-white">
+        <div class="max-w-container mx-auto px-4 text-center">
+            <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-ghost-white mb-6">
+                STAY UPDATED
+            </h2>
+            <p class="font-dm-sans font-light text-body leading-body text-ghost-white max-w-2xl mx-auto mb-8 opacity-95">
+                Get weekly updates with new blog posts, upcoming events, and program announcements delivered to your inbox.
+            </p>
             
-            <form class="newsletter-form">
-                <div class="newsletter-form__input-group">
-                    <input type="email" placeholder="Enter your email address" class="newsletter-form__input" required>
-                    <button type="submit" class="newsletter-form__button">Subscribe</button>
+            <form class="max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 py-3 px-4 font-dm-sans text-body border-2 border-transparent rounded-lg focus:outline-none focus:border-yellow-green text-eerie-black" required>
+                    <button type="submit" class="py-3 px-8 font-futura-medium font-semibold text-[clamp(0.9rem,2vw,1rem)] uppercase tracking-futura-med bg-yellow-green text-eerie-black border-0 cursor-pointer rounded-lg transition-all duration-standard hover:bg-yellow-green/90 hover:-translate-y-0.5 whitespace-nowrap" style="transform: translateY(0)">
+                        Subscribe
+                    </button>
                 </div>
-                <p class="text-cream text-xs mt-4">We respect your privacy. Unsubscribe at any time.</p>
+                <p class="text-ghost-white text-xs mt-4 opacity-80">We respect your privacy. Unsubscribe at any time.</p>
             </form>
         </div>
     </section>
 
     <!-- Recent Events -->
-    <section class="py-16 md:py-20">
-        <div class="section-container">
-            <h2 class="section-heading text-center mb-12">Recent Events</h2>
+    <section class="py-[clamp(4rem,8vw,5rem)] md:py-[clamp(5rem,10vw,6.25rem)] bg-white">
+        <div class="max-w-container mx-auto px-4">
+            <h2 class="font-futura-extrabold text-section-title uppercase tracking-futura-extra text-light-gray text-center mb-12 section-title-underline">
+                RECENT EVENTS
+            </h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="event-card">
-                    <div class="event-card__date">
-                        <div class="event-card__month">Oct</div>
-                        <div class="event-card__day">15</div>
-                    </div>
-                    <div class="event-card__content">
-                        <h3 class="features-title mb-2">Portfolio Review Session</h3>
-                        <p class="body-text text-sm mb-3">Get feedback from industry professionals and recent graduates on your portfolio projects.</p>
-                        <div class="event-card__details">
-                            <span class="text-xs text-medium-brown">6:00 PM • SW1 Room 1650</span>
+                <div class="bg-ghost-white p-6 rounded-lg shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 text-center bg-sapphire-blue text-ghost-white rounded-lg p-3 min-w-[4rem]">
+                            <div class="font-futura-medium text-xs uppercase tracking-futura-med">Oct</div>
+                            <div class="font-futura-extrabold text-2xl leading-none mt-1">15</div>
                         </div>
+                        <div class="flex-1">
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Portfolio Review Session
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-3">
+                        Get feedback from industry professionals and recent graduates on your portfolio projects.
+                    </p>
+                    <div class="text-xs text-light-gray">
+                        6:00 PM • SW1 Room 1650
                     </div>
                 </div>
                 
-                <div class="event-card">
-                    <div class="event-card__date">
-                        <div class="event-card__month">Oct</div>
-                        <div class="event-card__day">22</div>
-                    </div>
-                    <div class="event-card__content">
-                        <h3 class="features-title mb-2">Industry Panel Discussion</h3>
-                        <p class="body-text text-sm mb-3">Vancouver tech leaders discuss current trends and what they look for in new hires.</p>
-                        <div class="event-card__details">
-                            <span class="text-xs text-medium-brown">7:00 PM • Virtual Event</span>
+                <div class="bg-ghost-white p-6 rounded-lg shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 text-center bg-sapphire-blue text-ghost-white rounded-lg p-3 min-w-[4rem]">
+                            <div class="font-futura-medium text-xs uppercase tracking-futura-med">Oct</div>
+                            <div class="font-futura-extrabold text-2xl leading-none mt-1">22</div>
                         </div>
+                        <div class="flex-1">
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                Industry Panel Discussion
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-3">
+                        Vancouver tech leaders discuss current trends and what they look for in new hires.
+                    </p>
+                    <div class="text-xs text-light-gray">
+                        7:00 PM • Virtual Event
                     </div>
                 </div>
                 
-                <div class="event-card">
-                    <div class="event-card__date">
-                        <div class="event-card__month">Nov</div>
-                        <div class="event-card__day">5</div>
-                    </div>
-                    <div class="event-card__content">
-                        <h3 class="features-title mb-2">JavaScript Workshop</h3>
-                        <p class="body-text text-sm mb-3">Hands-on workshop covering advanced JavaScript concepts for second-year students.</p>
-                        <div class="event-card__details">
-                            <span class="text-xs text-medium-brown">2:00 PM • SW1 Room 1650</span>
+                <div class="bg-ghost-white p-6 rounded-lg shadow-card transition-all duration-standard card-hover-lift hover:shadow-card-hover">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 text-center bg-sapphire-blue text-ghost-white rounded-lg p-3 min-w-[4rem]">
+                            <div class="font-futura-medium text-xs uppercase tracking-futura-med">Nov</div>
+                            <div class="font-futura-extrabold text-2xl leading-none mt-1">5</div>
                         </div>
+                        <div class="flex-1">
+                            <h3 class="font-futura-medium text-feature-title uppercase tracking-futura-med text-sapphire-blue mb-2">
+                                JavaScript Workshop
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="font-dm-sans font-light text-[0.875rem] leading-body text-eerie-black mb-3">
+                        Hands-on workshop covering advanced JavaScript concepts for second-year students.
+                    </p>
+                    <div class="text-xs text-light-gray">
+                        2:00 PM • SW1 Room 1650
                     </div>
                 </div>
             </div>
@@ -255,40 +337,66 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-main">
-                    <h3 class="footer-logo">THE CREATIVE DEV</h3>
-                    <p class="footer-description">
-                        A student-led initiative supporting BCIT New Media students with peer-created resources, tutorials, and community connections. By students, for students.
+    <footer class="bg-eerie-black text-ghost-white py-[clamp(2.5rem,5vw,3.5rem)]">
+        <div class="max-w-container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Footer Column 1 -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="logos/logo.png" alt="PathwayHub Logo" class="h-12 w-auto">
+                        <h3 class="font-futura-extrabold text-[1.3rem] text-sapphire-blue uppercase tracking-futura-extra leading-none m-0">
+                            PathwayHub
+                        </h3>
+                    </div>
+                    <p class="font-dm-sans font-light text-[0.9rem] leading-body opacity-80">
+                        A student-driven platform supporting BCIT New Media students with resources, connections, and opportunities.
                     </p>
                 </div>
                 
-                <div class="footer-column">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About</a></li>
-                        <li><a href="program-hub.html" class="footer-link">Program Hub</a></li>
-                        <li><a href="resources.html" class="footer-link">Student Resources</a></li>
-                        <li><a href="community.html" class="footer-link">Community</a></li>
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        <li><a href="about.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">About Us</a></li>
+                        <li><a href="resources.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Resources</a></li>
+                        <li><a href="events.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Events</a></li>
+                        <li><a href="submit.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Submit</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h4 class="footer-heading">Connect</h4>
-                    <ul class="footer-links">
-                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Join the Team</a></li>
-                        <li><a href="contact.html" class="footer-link">Contribute Content</a></li>
-                        <li><a href="community.html" class="footer-link">Student Forum</a></li>
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Community</h4>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        <li><a href="stories.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Student Stories</a></li>
+                        <li><a href="community.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Community</a></li>
+                        <li><a href="opportunities.html" class="font-dm-sans font-light text-[0.9rem] text-ghost-white no-underline opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue">Opportunities</a></li>
                     </ul>
+                </div>
+                
+                <!-- Footer Column 4 -->
+                <div>
+                    <h4 class="font-futura-medium text-[1rem] uppercase tracking-futura-med text-yellow-green mb-4">Connect</h4>
+                    <p class="font-dm-sans font-light text-[0.9rem] leading-body opacity-80 mb-3">
+                        Join our community and stay updated.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-ghost-white text-[1.3rem] opacity-80 transition-all duration-standard hover:opacity-100 hover:text-sapphire-blue" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2025 The Creative Dev. Created by BCIT New Media students.
+            <div class="pt-6 border-t border-light-gray/20 text-center">
+                <p class="font-dm-sans font-light text-[0.85rem] opacity-70 m-0">
+                    &copy; 2024 PathwayHub. Created by BCIT New Media students.
                 </p>
             </div>
         </div>
