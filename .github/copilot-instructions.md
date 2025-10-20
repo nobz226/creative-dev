@@ -36,13 +36,13 @@ The project's **visual identity is typography-driven** with a strict 3-font hier
 
 **CSS custom properties pattern:**
 ```css
-:root {
-    /* Color palette - earth tones */
-    --cream: #dacebf;
-    --dark-brown: #483328;
-    --slate-blue: #5b7594;
-    --medium-brown: #77614d;
-    --white: #ffffff;
+    /* Color palette */
+  :root {
+    --ghost-white: #E8E9F3;
+    --eerie-black: #222222;
+    --sapphire-blue: #1255AB;
+    --yellow-green: #a2d543;
+    --light-gray: #a6a6a8;
 }
 ```
 

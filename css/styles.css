@@ -219,7 +219,6 @@ body {
     height: clamp(4rem, 6vw, 4.5rem); /* Reduced from 10-11rem which was too large */
     width: auto;
     flex-shrink: 0;
-    filter: brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(1326%) hue-rotate(344deg) brightness(95%) contrast(88%);
 }
 
 /* Navigation Logo Variants */
@@ -707,14 +706,49 @@ body {
 }
 
 /* HEADING - Footer logo uses Futura Extrabold */
-.footer-logo {
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-svg {
+    height: clamp(3.5rem, 5vw, 4rem);
+    width: auto;
+    flex-shrink: 0;
+}
+
+.footer-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-main-title {
     font-family: var(--futura-extrabold);
     font-weight: 900;
-    color: var(--eerie-black);
-    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-    margin-bottom: 1rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    color: var(--sapphire-blue);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0;
+}
+
+.footer-subtitle {
+    font-family: var(--futura-medium);
+    font-weight: 600;
+    font-size: clamp(0.6rem, 1.3vw, 0.75rem);
+    color: var(--yellow-green);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Remove old footer-logo class */
+.footer-logo {
+    display: none;
 }
 
 /* PARAGRAPH - Footer description uses DM Sans Light */
@@ -1602,4 +1636,38 @@ body {
         padding: 0.75rem clamp(0.3rem, 0.8vw, 0.8rem);
         font-size: clamp(0.7rem, 1.2vw, 0.8rem);
     }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.header-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.header-main-title {
+    font-family: var(--futura-extrabold);
+    font-weight: 900;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: var(--sapphire-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-family: var(--futura-medium);
+    font-weight: 600;
+    font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+    color: var(--yellow-green);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    line-height: 1;
+    margin: 0;
 }

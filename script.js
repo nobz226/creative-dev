@@ -1,5 +1,5 @@
 /**
- * The Creative Dev - Main JavaScript
+ * PathwayHub - Main JavaScript
  * Handles mobile navigation and interactive features
  */
 
