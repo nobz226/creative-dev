@@ -67,25 +67,59 @@ fonts/
 
 **Local development:** Static files - use simple HTTP server:
 ```bash
-python -m http.server 8000  # Python
-npx http-server             # Node.js
-php -S localhost:8000       # PHP
+```markdown
+# Copilot instructions — PathwayHub (creative-dev)
+
+This repo is a small, static landing site (vanilla HTML/CSS/JS). These instructions capture the specific patterns, workflows and examples an AI coding agent should follow to be productive here.
+
+Key facts (quick):
+- Static site: HTML files at repo root (index.html, about.html, courses.html, etc.).
+- Single stylesheet: `css/styles.css` drives layout, spacing and the design system.
+- Small vanilla JS: `script.js` handles mobile nav, filtering stubs, and small utilities.
+- Fonts live in `fonts/` and are required for correct typography.
+
+What to change vs not-change:
+- Change content, layout, micro-interactions and accessibility fixes freely.
+- Do NOT replace the three-font system or hardcode alternative fonts. Use CSS custom properties in `:root`.
+
+Important patterns and examples (use these as templates):
+- Typography: all font families and weights are defined as custom properties in `:root` (see `css/styles.css` and README). Example property names: `--futura-extrabold`, `--futura-medium`, `--dm-sans-light`.
+- Fluid typography & spacing: prefer `clamp(min, vw, max)` for font sizes and paddings. Media queries are used only for layout breakpoints (640px, 768px, 1024px, 1200px).
+- Component naming: `.section-container` for main wrappers; section components use prefixes like `.hero-*`, `.features-*`, `.stories-*`. BEM-like modifiers exist (e.g., `.filter-button--active`).
+- Mobile nav: `script.js` implements the hamburger toggle and sets `aria-expanded`. When editing, preserve ARIA behavior and the `hidden` class toggle.
+
+Developer workflows / commands (concrete):
+- Serve locally (recommended): `python -m http.server 8000` then open `http://localhost:8000`.
+- Alternative: `npx http-server` or `php -S localhost:8000`.
+- There is no build pipeline. Editing `index.html` or `css/styles.css` is reflected immediately when served.
+
+Files to check when making changes:
+- `css/styles.css` — update color vars, spacing, typography. Example: change `--sapphire-blue` in `:root`.
+- `script.js` — mobile menu, smooth scrolling, filter button active states and small utilities (debounce, formatDate). Keep `DOMContentLoaded` wrappers intact.
+- Fonts: verify `fonts/` structure when changing font-face declarations.
+
+Examples to follow when implementing new features:
+- Add a new filter for courses: follow `filter-button` conventions (use `data-filter` attribute and `filter-button--active` class). See `script.js` for filter button handling.
+- Add a responsive card component: follow existing card styles (feature/course/story/blog cards described in README). Use `.section-container` and `clamp()` for spacing.
+
+Project-specific conventions (non-obvious):
+- Prefer local server when testing anchor scrolling and mobile menu (file:// can break some JS behaviors).
+- Use uppercase Futura for headings where present (visual identity relies on letter-spacing and caps).
+- Use `svg` logos from `logos/` — prefer vector variants for header and favicons.
+
+Accessibility and behavior rules:
+- Maintain ARIA attributes on interactive elements (e.g., `aria-expanded` on mobile menu button).
+- Preserve keyboard focus states and visible outlines for interactive elements.
+
+When you commit:
+- Keep commit messages concise and reference the affected pages (e.g., `css: tweak hero spacing on index.html`).
+
+If you need to scaffold tests or a build process, note it as a separate task; the repo currently has no test or build tooling.
+
+References / quick pointers:
+- Mobile menu logic: `script.js` (DOMContentLoaded -> mobile menu handlers)
+- Font files and organization: `fonts/` (README has exact layout)
+- Main CSS: `css/styles.css` (colors, clamp, container widths)
+
+Please ask if any section needs more concrete examples or if you'd like me to add a short checklist for PR reviewers.
 ```
-
-**Missing JavaScript:** The HTML references `script.js` but file doesn't exist - likely for future mobile menu functionality.
-
-## Key Conventions
-
-- **Content width:** 1280px maximum with responsive padding
-- **Color usage:** Earth tones only - no bright colors or gradients
-- **Spacing system:** Uses `clamp()` for all padding/margins with consistent ratios
-- **Button styling:** Futura Medium font, consistent padding patterns
-- **Image handling:** SVG logos, no raster images in current implementation
-
-## When Making Changes
-
-- **Typography changes:** Update CSS custom properties, never hardcode fonts
-- **Color changes:** Modify `:root` variables, test contrast ratios
-- **Responsive changes:** Use `clamp()` first, media queries only for layout shifts
-- **Asset additions:** Follow nested directory structure in `fonts/` and `logos/`
-- **Content updates:** Maintain semantic HTML structure and section patterns
