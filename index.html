@@ -88,20 +88,16 @@
         
         <!-- Right Side - Video Area with matching 15-degree angle -->
         <div class="absolute inset-0 bg-eerie-black" style="clip-path: polygon(63% 0, 100% 0, 100% 100%, 37% 100%);">
-            <div class="relative w-full h-full flex items-center justify-center">
-                <!-- Video placeholder -->
-                <div class="text-ghost-white font-futura-extrabold text-[3rem] tracking-futura-extra uppercase">
-                    VIDEO
-                </div>
-                <!-- Mux Video Player will replace the placeholder above -->
-                <!-- <mux-player
-                    stream-type="on-demand"
-                    playback-id="YOUR_MUX_PLAYBACK_ID"
-                    metadata-video-title="PathwayHub Intro"
-                    accent-color="#1255AB"
-                    class="w-full h-full object-cover"
-                ></mux-player> -->
-            </div>
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                class="w-full h-full object-cover"
+            >
+                <source src="video/video-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
