@@ -65,18 +65,43 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-yellow-green text-ghost-white py-[clamp(4rem,8vw,6rem)] text-center relative hero-texture">
-        <div class="max-w-container mx-auto px-4 relative z-10">
-            <h1 class="font-futura-extrabold text-hero-title uppercase tracking-futura-extra leading-title mb-6 text-shadow">
-                BY STUDENTS,<br>FOR STUDENTS
-            </h1>
-            <p class="font-dm-sans font-light text-hero-subtitle leading-normal mb-10 max-w-[50rem] mx-auto opacity-95">
-                PathwayHub supports New Media students at BCIT with peer-created resources,
-                opportunities, and community connections to help you succeed in your program.
-            </p>
-            <a href="resources.html" class="inline-block text-center no-underline bg-sapphire-blue text-ghost-white py-[clamp(1rem,2vw,1.2rem)] px-[clamp(2rem,4vw,2.5rem)] font-futura-medium font-semibold text-[clamp(1rem,2vw,1.1rem)] uppercase tracking-futura-med border-0 cursor-pointer rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.2)] transition-all duration-standard hover:bg-sapphire-blue/90 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)]" style="transform: translateY(0)">
-                EXPLORE RESOURCES
-            </a>
+    <section class="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
+        <!-- Left Side - Text Content with 15-degree Angled Edge -->
+        <div class="absolute inset-0 bg-yellow-green" style="clip-path: polygon(0 0, 63% 0, 37% 100%, 0 100%);">
+            <div class="relative h-full flex items-center z-10">
+                <div class="max-w-container mx-auto px-4 w-full">
+                    <div class="max-w-[600px] pr-8">
+                        <h1 class="font-futura-extrabold text-hero-title uppercase tracking-futura-extra leading-title mb-6 text-shadow text-ghost-white">
+                            BY STUDENTS,<br>FOR STUDENTS
+                        </h1>
+                        <p class="font-dm-sans font-light text-hero-subtitle leading-normal mb-10 opacity-95 text-ghost-white">
+                            PathwayHub supports New Media students at BCIT with peer-created resources,
+                            opportunities, and community connections to help you succeed in your program.
+                        </p>
+                        <a href="resources.html" class="inline-block text-center no-underline bg-sapphire-blue text-ghost-white py-[clamp(1rem,2vw,1.2rem)] px-[clamp(2rem,4vw,2.5rem)] font-futura-medium font-semibold text-[clamp(1rem,2vw,1.1rem)] uppercase tracking-futura-med border-0 cursor-pointer rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.2)] transition-all duration-standard hover:bg-sapphire-blue/90 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)]" style="transform: translateY(0)">
+                            EXPLORE RESOURCES
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Side - Video Area with matching 15-degree angle -->
+        <div class="absolute inset-0 bg-eerie-black" style="clip-path: polygon(63% 0, 100% 0, 100% 100%, 37% 100%);">
+            <div class="relative w-full h-full flex items-center justify-center">
+                <!-- Video placeholder -->
+                <div class="text-ghost-white font-futura-extrabold text-[3rem] tracking-futura-extra uppercase">
+                    VIDEO
+                </div>
+                <!-- Mux Video Player will replace the placeholder above -->
+                <!-- <mux-player
+                    stream-type="on-demand"
+                    playback-id="YOUR_MUX_PLAYBACK_ID"
+                    metadata-video-title="PathwayHub Intro"
+                    accent-color="#1255AB"
+                    class="w-full h-full object-cover"
+                ></mux-player> -->
+            </div>
         </div>
     </section>
 

@@ -24,10 +24,6 @@ module.exports = {
         'section-title': 'clamp(2rem, 5vw, 2.5rem)',
         'feature-title': 'clamp(1.3rem, 3vw, 1.6rem)',
         'body': 'clamp(0.9rem, 2vw, 1rem)',
-        'nav-link': 'clamp(0.8rem, 1.5vw, 0.9rem)',
-        'logo': 'clamp(1.1rem, 2.5vw, 1.4rem)',
-        'header-main': 'clamp(1.2rem, 2.5vw, 1.6rem)',
-        'header-sub': 'clamp(0.65rem, 1.5vw, 0.8rem)',
       },
       lineHeight: {
         'body': '1.7',
@@ -44,10 +40,32 @@ module.exports = {
       transitionDuration: {
         'standard': '300ms',
       },
-      spacing: {
-        '15': '3.75rem',
-      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow': {
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        },
+        '.card-hover-lift': {
+          transition: 'all 300ms ease',
+          transform: 'translateY(0)',
+        },
+        '.card-hover-lift:hover': {
+          transform: 'translateY(-4px)',
+        },
+        '.feature-card-accent::before': {
+          content: '""',
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          width: '100%',
+          height: '4px',
+          backgroundColor: '#1255AB',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }

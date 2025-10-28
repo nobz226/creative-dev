@@ -646,28 +646,6 @@ video {
 
 /* Hero section texture overlay - subtle grain pattern */
 
-.hero-texture::before {
-  content: '';
-  position: absolute;
-  inset: 0px;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.03"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.03"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.03"/><circle cx="10" cy="60" r="1" fill="white" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-}
-
-/* Section title underline - centered accent below titles */
-
-.section-title-underline::after {
-  content: '';
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  display: block;
-  height: 0.25rem;
-  width: 3.75rem;
-  border-radius: 0.125rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 34 34 / var(--tw-bg-opacity, 1));
-}
-
 /* Button hover lift - consistent with card pattern */
 
 /* Navigation link hover effect */
@@ -682,12 +660,24 @@ video {
   position: static;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
 
 .sticky {
   position: sticky;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.left-\[50\%\] {
+  left: 50%;
 }
 
 .top-0 {
@@ -847,6 +837,14 @@ video {
   min-height: 4.5rem;
 }
 
+.min-h-\[700px\] {
+  min-height: 700px;
+}
+
+.min-h-\[500px\] {
+  min-height: 500px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -893,6 +891,10 @@ video {
 
 .max-w-\[50rem\] {
   max-width: 50rem;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .max-w-\[800px\] {
@@ -1276,6 +1278,10 @@ video {
   padding-bottom: clamp(4rem,8vw,6rem);
 }
 
+.pr-8 {
+  padding-right: 2rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1344,6 +1350,10 @@ video {
 
 .text-\[1rem\] {
   font-size: 1rem;
+}
+
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
 .text-\[clamp\(0\.6rem\2c 1\.2vw\2c 0\.75rem\)\] {
@@ -1541,6 +1551,29 @@ video {
   transition-duration: 300ms;
 }
 
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover-lift {
+  transition: all 300ms ease;
+  transform: translateY(0);
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.feature-card-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #1255AB;
+}
+
 /* Text shadow for hero titles */
 
 .text-shadow {
@@ -1562,11 +1595,6 @@ video {
   background-color: rgb(232 233 243 / 0.9);
 }
 
-.hover\:bg-light-gray:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(166 166 168 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-sapphire-blue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(18 85 171 / var(--tw-bg-opacity, 1));
@@ -1578,10 +1606,6 @@ video {
 
 .hover\:bg-white\/15:hover {
   background-color: rgb(255 255 255 / 0.15);
-}
-
-.hover\:bg-yellow-green\/90:hover {
-  background-color: rgb(162 213 67 / 0.9);
 }
 
 .hover\:text-ghost-white:hover {
@@ -1648,6 +1672,14 @@ video {
     display: none;
   }
 
+  .md\:min-h-\[800px\] {
+    min-height: 800px;
+  }
+
+  .md\:min-h-\[600px\] {
+    min-height: 600px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1670,6 +1702,14 @@ video {
 @media (min-width: 1024px) {
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:min-h-\[900px\] {
+    min-height: 900px;
+  }
+
+  .lg\:min-h-\[700px\] {
+    min-height: 700px;
   }
 
   .lg\:grid-cols-2 {
